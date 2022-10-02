@@ -19,15 +19,15 @@ const type: typeof VALID_LAYOUT_VALUES[number] = "fill";
 const Home: NextPage = () => {
     const renderHeader = () => {
         return (
-            <section className="flex flex-row items-center w-ful justify-between py-10">
+            <section className="flex flex-row items-center w-ful justify-between py-5">
                 <h4 className="text-2xl ">Developer</h4>
                 <div className="flex flex-row items-center">
-                    <Link className="" href={"./"}>
+                    <Link className="" href={"./projects"}>
                         <div className="mr-5 cursor-pointer hover:text-blue-500">
                             Projects
                         </div>
                     </Link>
-                    <Link className="" href={"./"}>
+                    <Link className="" href={"./resume"}>
                         <div className="cursor-pointer hover:text-blue-500">
                             Resume
                         </div>
@@ -73,15 +73,9 @@ const Home: NextPage = () => {
     const renderFooter = () => {
         return (
             <div>
-                <div className="flex flex-row mt-20 gap-10">
-                    <Image
-                        src={require("../../public/images/web1.png")}
-                        className="w-1/2"
-                    />
-                    <Image
-                        src={require("../../public/images/web1.png")}
-                        className="w-1/2"
-                    />
+                <div className="flex flex-col md:flex-row mt-20 gap-5 md:gap-10">
+                    <Image src={require("../../public/images/web1.png")} />
+                    <Image src={require("../../public/images/web2.png")} />
                 </div>
             </div>
         );
@@ -98,29 +92,31 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="px-5 overflow-y-scroll">
+            <main className="px-5 md:px-20 lg:px-30 overflow-y-scroll">
                 {renderHeader()}
                 {renderBody()}
                 {renderFooter()}
             </main>
 
-            {/* <footer className={styles.footer}>
+            <footer className="px-5 pt-10 pb-5 text-center">
                 <a
                     href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="inline-flex flex-row items-center mx-auto"
                 >
-                    Powered by{" "}
+                    <text className="inline-">Powered by </text>
                     <span className={styles.logo}>
                         <Image
-                            src="/vercel.svg"
+                            src="/favicon.ico"
                             alt="Vercel Logo"
-                            width={72}
-                            height={16}
+                            height={30}
+                            width={30}
+                            layout="fixed"
                         />
                     </span>
                 </a>
-            </footer> */}
+            </footer>
         </div>
     );
 };
