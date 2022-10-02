@@ -70,6 +70,23 @@ const Home: NextPage = () => {
         );
     };
 
+    const renderFooter = () => {
+        return (
+            <div>
+                <div className="flex flex-row mt-20 gap-10">
+                    <Image
+                        src={require("../../public/images/web1.png")}
+                        className="w-1/2"
+                    />
+                    <Image
+                        src={require("../../public/images/web1.png")}
+                        className="w-1/2"
+                    />
+                </div>
+            </div>
+        );
+    };
+
     return (
         <div className={styles.container}>
             <Head>
@@ -81,9 +98,10 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="px-5">
+            <main className="px-5 overflow-y-scroll">
                 {renderHeader()}
                 {renderBody()}
+                {renderFooter()}
             </main>
 
             {/* <footer className={styles.footer}>
