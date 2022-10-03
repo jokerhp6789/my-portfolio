@@ -13,11 +13,7 @@ declare const VALID_LAYOUT_VALUES: readonly [
 const type: typeof VALID_LAYOUT_VALUES[number] = "fill";
 
 const Home: NextPage = () => {
-    return (
-        <div className={`${styles.container}`}>
-            <HomePage />
-        </div>
-    );
+    return <HomePage />;
 };
 
 export default Home;

@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { AiFillGitlab } from "react-icons/ai";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import Header from "../header/Header";
 
 export interface IHomePageProps {
     [key: string]: any;
@@ -61,18 +60,18 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
 
     const renderFooter = () => {
         return (
-            <div>
-                <div className="flex flex-col md:flex-row mt-20 gap-5 md:gap-10">
-                    <Image src={require("../../../public/images/web1.png")} />
-                    <Image src={require("../../../public/images/web2.png")} />
-                </div>
+            <div className="flex flex-col w-full md:flex-row mt-20 gap-5 md:gap-10">
+                <Image
+                    src={require("../../../public/images/web1.png")}
+                    className=""
+                />
+                <Image src={require("../../../public/images/web2.png")} />
             </div>
         );
     };
 
     return (
-        <main className="px-5 md:px-20 lg:px-30 overflow-y-scroll">
-            <Header />
+        <main className="md:px-20 lg:px-30 overflow-y-scroll">
             {renderBody()}
             {renderFooter()}
         </main>

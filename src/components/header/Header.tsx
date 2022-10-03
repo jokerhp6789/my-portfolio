@@ -31,7 +31,9 @@ const Header: React.FC<IHeaderProps> = ({ id }) => {
 
     return (
         <section className="flex flex-row items-center w-ful justify-between py-5 dark:text-white">
-            <h4 className="text-3xl ">Developer</h4>
+            <Link className="" href={"./"}>
+                <h4 className="text-2xl md:text-3xl ">Developer</h4>
+            </Link>
             <div className="flex flex-row items-center">
                 <Link className="" href={"./projects"}>
                     <div className="mr-5 cursor-pointer hover:text-blue-500">
