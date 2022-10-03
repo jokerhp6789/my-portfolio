@@ -60,21 +60,24 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
 
     const renderFooter = () => {
         return (
-            <div className="flex flex-col w-full md:flex-row mt-20 gap-5 md:gap-10">
+            <div className="flex flex-col w-full md:flex-row mt-20 gap-5 md:gap-5">
                 <Image
                     src={require("../../../public/images/web1.png")}
                     className=""
                 />
-                <Image src={require("../../../public/images/web2.png")} />
+                <Image
+                    src={require("../../../public/images/web2.png")}
+                    className=""
+                />
             </div>
         );
     };
 
     return (
-        <main className="md:px-20 lg:px-30 overflow-y-scroll">
+        <div className="">
             {renderBody()}
             {renderFooter()}
-        </main>
+        </div>
     );
 };
 
