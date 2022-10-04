@@ -35,21 +35,30 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <BsGithub size={50} />
+                                <BsGithub
+                                    size={50}
+                                    className="dark:text-white"
+                                />
                             </a>
                             <a
                                 href="https://gitlab.com/trung13988"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <AiFillGitlab size={50} />
+                                <AiFillGitlab
+                                    size={50}
+                                    className="dark:text-white"
+                                />
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/trung-do-xuan-71167b133/"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <BsLinkedin size={50} />
+                                <BsLinkedin
+                                    size={50}
+                                    className="dark:text-white"
+                                />
                             </a>
                         </div>
                     </div>

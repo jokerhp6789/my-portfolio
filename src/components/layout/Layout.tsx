@@ -40,7 +40,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
     return (
         <AppStateContext.Provider value={{ theme, setAppState, onChangeState }}>
             {renderMetaHead()}
-            <div className="mx-3 md:mx-20 lg:mx-40 min-h-screen flex flex-col">
+            <div className="mx-3 md:mx-20 lg:mx-30 xl:mx-40 min-h-screen flex flex-col">
                 <Header />
                 <main className="h-full flex-grow">{children}</main>
                 <footer className="pt-10 pb-5 text-center">
