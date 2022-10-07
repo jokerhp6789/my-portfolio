@@ -37,7 +37,7 @@ const Header: React.FC<IHeaderProps> = ({ id }) => {
             <div className="flex flex-row items-center">
                 <Link className="" href={"./projects"}>
                     <div className="mr-5 cursor-pointer hover:text-blue-500">
-                        Projects
+                        Showcase
                     </div>
                 </Link>
                 <Link className="" href={"./resume"}>

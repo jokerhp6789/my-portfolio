@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ClassNames from "classnames";
 import { MdArrowDropDownCircle } from "react-icons/md";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 export interface IEmployementItemProps {
     label?: string;
@@ -47,13 +48,13 @@ const EmployementItem: React.FC<IEmployementItemProps> = ({
             <div className="flex flex-row items-start">
                 {icon}
                 <div className="ml-4">
-                    <h4 className="font-bold text-blue-500">{label}</h4>
-                    <time className="block text-sm text-blue-200 mt-1 italic">
+                    <h4 className=" text-blue-500 font-medium">{label}</h4>
+                    <time className="block text-sm text-blue-500 dark:text-blue-500 italic font-medium">
                         {timeRange}
                     </time>
                 </div>
             </div>
-            <div className="ml-4 mt-2">
+            <div className="ml-4 mt-1">
                 <p className="text">{description}</p>
                 {children}
             </div>
@@ -76,14 +77,14 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
             className="mt-3 border border-1 border-blue-200 bg-blue-200 dark:border-blue-900 dark:bg-blue-900 p-3 rounded-md"
             onClick={onClick}
         >
-            <div className="flex flex-row items-center justify-between text-blue-500 dark:text-white">
+            <div className="flex flex-row items-center justify-between dark:text-white">
                 <div className="flex flex-row items-center">
                     <h4 className="text-sm font-bold whitespace-nowrap">
                         {label}
                     </h4>
                     {icon}
                 </div>
-                <MdArrowDropDownCircle
+                <IoMdArrowDropdown
                     size={24}
                     onClick={onClick}
                     className={`cursor-pointer arrow-icon ${ClassNames({

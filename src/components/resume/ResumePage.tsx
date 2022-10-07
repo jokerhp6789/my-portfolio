@@ -124,15 +124,23 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                                                   <ProjectItem
                                                       expanding={isExpading}
                                                       key={projectId}
-                                                      onClick={() =>
-                                                          isExpading
-                                                              ? setactiveExpanding(
-                                                                    undefined
-                                                                )
-                                                              : setactiveExpanding(
-                                                                    projectId
-                                                                )
-                                                      }
+                                                      onClick={() => {
+                                                          if (isExpading) {
+                                                              return setactiveExpanding(
+                                                                  undefined
+                                                              );
+                                                          }
+                                                          setactiveExpanding(
+                                                              undefined
+                                                          );
+                                                          setTimeout(
+                                                              () =>
+                                                                  setactiveExpanding(
+                                                                      projectId
+                                                                  ),
+                                                              350
+                                                          );
+                                                      }}
                                                       label={projectLabel}
                                                       icon={
                                                           iconWeb
