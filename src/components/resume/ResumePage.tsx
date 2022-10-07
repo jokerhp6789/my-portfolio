@@ -82,6 +82,54 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
         );
     };
 
+    const renderPersonalInfo = () => {
+        return (
+            <div className="md:col-span-4 border border-2 border-blue-200 dark:border-blue-900 flex flex-col items-center px-4 py-5 md:p-6 text-white rounded-md">
+                <div className="d-none md:block">
+                    <Image
+                        src={require("../../../public/images/avatar.jpg")}
+                        width={200}
+                        height={200}
+                        layout="fixed"
+                        alt="avatar"
+                        className="rounded-full"
+                    />
+                </div>
+                <div className="block md:hidden">
+                    <Image
+                        src={require("../../../public/images/avatar-mobile.jpg")}
+                        width={125}
+                        height={125}
+                        layout="fixed"
+                        alt="avatar"
+                        className="rounded-full"
+                    />
+                </div>
+
+                <div className="text-xl my-3 font-bold text-blue-500 dark:text-blue-200">
+                    Do Xuan Trung
+                </div>
+                <div className="flex flex-row gap-3">
+                    {renderIcon(
+                        <AiFillPhone className="text-blue-500" />,
+                        () => {
+                            if (window !== undefined) {
+                                navigator.clipboard.writeText("+66917749984");
+                            }
+                        }
+                    )}
+                    {renderIcon(<MdEmail className="text-blue-500" />, () => {
+                        if (window !== undefined) {
+                            navigator.clipboard.writeText(
+                                "trung13988@gmail.com"
+                            );
+                        }
+                    })}
+                </div>
+            </div>
+        );
+    };
+
     const renderEmpHistory = (
         <React.Fragment>
             {renderTitle("My timeline")}
@@ -170,36 +218,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-10 md:gap-5 text-base">
-            <div className="md:col-span-4 border border-2 border-blue-200 dark:border-blue-900 flex flex-col items-center px-4 py-5 md:p-6 text-white rounded-md">
-                <Image
-                    src={require("../../../public/images/avatar.jpg")}
-                    width={200}
-                    height={200}
-                    layout="fixed"
-                    alt="avatar"
-                    className="rounded-full"
-                />
-                <div className="text-xl my-3 font-bold text-blue-500 dark:text-blue-200">
-                    Do Xuan Trung
-                </div>
-                <div className="flex flex-row gap-3">
-                    {renderIcon(
-                        <AiFillPhone className="text-blue-500" />,
-                        () => {
-                            if (window !== undefined) {
-                                navigator.clipboard.writeText("+66917749984");
-                            }
-                        }
-                    )}
-                    {renderIcon(<MdEmail className="text-blue-500" />, () => {
-                        if (window !== undefined) {
-                            navigator.clipboard.writeText(
-                                "trung13988@gmail.com"
-                            );
-                        }
-                    })}
-                </div>
-            </div>
+            {renderPersonalInfo()}
             <div className="dark:text-white md:col-span-6">
                 {renderTitle("About myself", "mt-2")}
                 <p className="">
