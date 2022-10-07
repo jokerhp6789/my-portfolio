@@ -1,0 +1,26 @@
+.t-resume-page {
+}
+
+.arrow-icon {
+    transition: all ease-in 300ms;
+}
+
+.arrow-icon__drop-down {
+    transform: rotateZ(0deg);
+}
+
+.arrow-icon__upside-down {
+    transform: rotateZ(180deg);
+}
+
+.expander-content {
+    transition: max-height ease-in-out 500ms;
+    overflow: hidden;
+}
+
+.expander-content__expanding {
+    max-height: 500px;
+}
+.expander-content__hiding {
+    max-height: 0px;
+}

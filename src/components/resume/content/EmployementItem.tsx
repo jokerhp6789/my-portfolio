@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ClassNames from "classnames";
 import { MdArrowDropDownCircle } from "react-icons/md";
 
 export interface IEmployementItemProps {
@@ -6,12 +7,15 @@ export interface IEmployementItemProps {
     timeRange?: string;
     description?: string;
     children?: any;
+    onClick?: () => void;
 }
 
 export interface IProjectItemProps {
     label?: string;
     icon?: any;
     children?: any;
+    onClick?: () => void;
+    expanding?: boolean;
 }
 
 const EmployementItem: React.FC<IEmployementItemProps> = ({
@@ -19,6 +23,7 @@ const EmployementItem: React.FC<IEmployementItemProps> = ({
     timeRange,
     description,
     children,
+    onClick,
 }) => {
     const icon = (
         <span className="flex absolute -left-4 justify-center items-center w-7 h-7 bg-blue-200 rounded-full ring-9 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -42,8 +47,8 @@ const EmployementItem: React.FC<IEmployementItemProps> = ({
             <div className="flex flex-row items-start">
                 {icon}
                 <div className="ml-4">
-                    <h4 className="text font-bold text-blue-500">{label}</h4>
-                    <time className="block text-xs mt-1 italic">
+                    <h4 className="font-bold text-blue-500">{label}</h4>
+                    <time className="block text-sm text-blue-200 mt-1 italic">
                         {timeRange}
                     </time>
                 </div>
@@ -62,24 +67,39 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
     label,
     icon,
     children,
+    onClick,
+    expanding,
 }) => {
-    const [expanding, setExpanding] = useState(false);
+    // const [expanding, setExpanding] = useState(false);
     return (
-        <li className="mt-3 border border-1 border-blue-500 bg-blue-200 dark:border-blue-500 dark:bg-blue-900 p-3 rounded-md">
-            <div className="flex flex-row items-center justify-between">
+        <li
+            className="mt-3 border border-1 border-blue-200 bg-blue-200 dark:border-blue-900 dark:bg-blue-900 p-3 rounded-md"
+            onClick={onClick}
+        >
+            <div className="flex flex-row items-center justify-between text-blue-500 dark:text-white">
                 <div className="flex flex-row items-center">
-                    <h4 className="text-sm font-bold">{label}</h4>
+                    <h4 className="text-sm font-bold whitespace-nowrap">
+                        {label}
+                    </h4>
                     {icon}
                 </div>
                 <MdArrowDropDownCircle
                     size={24}
-                    onClick={() => {
-                        setExpanding(!expanding);
-                    }}
-                    className="cursor-pointer"
+                    onClick={onClick}
+                    className={`cursor-pointer arrow-icon ${ClassNames({
+                        "arrow-icon__upside-down": expanding,
+                        "arrow-icon__drop-down": !expanding,
+                    })} `}
                 />
             </div>
-            {expanding && <div className="mt-1">{children}</div>}
+            <div
+                className={`mt-1 expander-content ${ClassNames({
+                    "expander-content__expanding": expanding,
+                    "expander-content__hiding": !expanding,
+                })}`}
+            >
+                {children}
+            </div>
         </li>
     );
 };

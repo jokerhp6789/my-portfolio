@@ -1,20 +1,23 @@
 import Image from "next/image";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { AiFillPhone } from "react-icons/ai";
-import { MdEmail } from "react-icons/md";
-import { IoMdOpen } from "react-icons/io";
-import { DiAndroid } from "react-icons/di";
 import { BsApple } from "react-icons/bs";
-import Button from "../button/Button";
+import { DiAndroid } from "react-icons/di";
+import { IoMdOpen } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 import EmployementItem, { ProjectItem } from "./content/EmployementItem";
+import {
+    ResumeEmploymentDataProjectType,
+    ResumeEmploymentDataType,
+    RESUME_EMPLOYEMENT_DATA,
+} from "./data/ResumeData";
 
 export interface IResumePageProps {
     [key: string]: any;
 }
 
 const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
-    const [showAuthModal, setShowAuthModal] = useState(false);
+    const [activeExpanding, setactiveExpanding] = useState<string>();
 
     const renderRow = (label: string, content: string) => {
         return (
@@ -27,12 +30,12 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
 
     const renderIcon = (icon: any, action: () => any) => {
         return (
-            <div
+            <a
                 className=" p-2 rounded-full cursor-pointer bg-blue-200 dark:bg-blue-900"
                 onClick={action}
             >
                 {icon}
-            </div>
+            </a>
         );
     };
 
@@ -60,7 +63,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
         linkAndroid: string;
     }) => {
         return (
-            <div className="flex flex-row items-center gap-2 ml-2">
+            <div className="flex flex-row items-center gap-3 ml-3">
                 <a href={linkAndroid} target="_blank" rel="noreferrer">
                     <DiAndroid className="cursor-pointer" size={24} />
                 </a>
@@ -71,62 +74,88 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
         );
     };
 
+    const renderIconWeb = (link: string) => {
+        return (
+            <a href={link} target="_blank" rel="noreferrer">
+                <IoMdOpen className="ml-3 cursor-pointer" size={24} />
+            </a>
+        );
+    };
+
     const renderEmpHistory = (
         <React.Fragment>
-            {renderTitle("Employment history")}
+            {renderTitle("My timeline")}
             <ol className="relative border-l-2 border-blue-200 dark:border-blue-900 ml-2">
-                <EmployementItem
-                    label="Software Developer at Lotus Bedding Groups, Bangkok"
-                    timeRange="FEBRUARY 2020 — PRESENT"
-                    description="Working as software developer, create and maintain company's websites and applications"
-                >
-                    <label className="font-bold my-2">Projects:</label>
-                    <ProjectItem
-                        label="Sale Infinity X - Web"
-                        icon={
-                            <IoMdOpen
-                                className="ml-3 cursor-pointer"
-                                size={24}
-                            />
-                        }
-                    >
-                        <p>
-                            - Description: Web page to place order , create and
-                            manage products , includes dashboard page to monitor
-                            data, create cart rules , promotions, transfer and
-                            receive stocks.
-                        </p>
-                        <p>
-                            - Tech: Reactjs, Rest API , React-redux, SCSS,
-                            Material UI , Bootstrap,Firebase Messaging,
-                        </p>
-                    </ProjectItem>
-                    <ProjectItem
-                        label="Sale Infinity X - App"
-                        icon={renderAndroidIos({
-                            linkAndroid:
-                                "https://play.google.com/store/apps/details?id=com.lotusbedding.onlinesalesorder&hl=th&gl=US",
-                            linkIos:
-                                "https://apps.apple.com/th/app/sales-infinity-x/id1521821249",
-                        })}
-                    >
-                        <p>
-                            - Description: app version includes all
-                            functionality of the web version
-                        </p>
-                        <p>
-                            - Tech: React Native, Rest API ,React-redux,Firebase
-                            Messaging, ...
-                        </p>
-                    </ProjectItem>
-                </EmployementItem>
-                <EmployementItem
-                    label="Software Developer at Lotus Bedding Groups, Bangkok"
-                    timeRange="FEBRUARY 2020 — PRESENT"
-                    description="Working as software developer in create and maintain company website and application . Current stack is BE and FE , with ReactJS , NextJS , React-native for FE , and NestJS and MongoDB for BE"
-                >
-                    Working Lotus
-                </EmployementItem>
+                {RESUME_EMPLOYEMENT_DATA.map(
+                    (item: ResumeEmploymentDataType) => {
+                        const {
+                            label,
+                            timeRange,
+                            description,
+                            projects = [],
+                        } = item || {};
+                        const empId = `${label}_${timeRange}_${description}`;
+                        return (
+                            <EmployementItem
+                                key={empId}
+                                label={timeRange}
+                                description={description}
+                                timeRange={label}
+                            >
+                                <label className="text-sm font-bold my-2">
+                                    Projects:
+                                </label>
+                                {Array.isArray(projects) && projects?.length > 0
+                                    ? projects?.map?.(
+                                          (
+                                              project: ResumeEmploymentDataProjectType,
+                                              index
+                                          ) => {
+                                              const {
+                                                  iconAndroidIos,
+                                                  iconWeb,
+                                                  content,
+                                                  label: projectLabel,
+                                              } = project as any;
+                                              const projectId = `${empId}_${iconWeb}_${iconAndroidIos}_${projectLabel}_${index}`;
+                                              const isExpading =
+                                                  projectId === activeExpanding;
+                                              return (
+                                                  <ProjectItem
+                                                      expanding={isExpading}
+                                                      key={projectId}
+                                                      onClick={() =>
+                                                          isExpading
+                                                              ? setactiveExpanding(
+                                                                    undefined
+                                                                )
+                                                              : setactiveExpanding(
+                                                                    projectId
+                                                                )
+                                                      }
+                                                      label={projectLabel}
+                                                      icon={
+                                                          iconWeb
+                                                              ? renderIconWeb(
+                                                                    iconWeb
+                                                                )
+                                                              : iconAndroidIos
+                                                              ? renderAndroidIos(
+                                                                    iconAndroidIos
+                                                                )
+                                                              : null
+                                                      }
+                                                  >
+                                                      {content}
+                                                  </ProjectItem>
+                                              );
+                                          }
+                                      )
+                                    : projects}
+                            </EmployementItem>
+                        );
+                    }
+                )}
             </ol>
         </React.Fragment>
     );
@@ -142,7 +171,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                     alt="avatar"
                     className="rounded-full"
                 />
-                <div className="text-xl my-3 font-bold text-blue-200">
+                <div className="text-xl my-3 font-bold text-blue-500 dark:text-blue-200">
                     Do Xuan Trung
                 </div>
                 <div className="flex flex-row gap-3">
@@ -177,11 +206,6 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                 </p>
                 {renderEmpHistory}
             </div>
-            {/* <div className="mt-5 flex w-full justify-end">
-                <Button className="p-2" onClick={() => setShowAuthModal(true)}>
-                    Edit Mode
-                </Button>
-            </div> */}
         </div>
     );
 };
