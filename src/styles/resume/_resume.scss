@@ -2,7 +2,11 @@
 }
 
 .arrow-icon {
-    transition: all ease-in 300ms;
+    transition: all ease-in 500ms;
+    -moz-transition: all 500ms ease-in; /* Firefox 4 */
+    -webkit-transition: all 500ms ease-in; /* Safari and Chrome */
+    -o-transition: all 500ms ease-in; /* Opera */
+    -ms-transition: all 500ms ease-in; /* Explorer 10 */
 }
 
 .arrow-icon__drop-down {
