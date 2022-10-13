@@ -43,27 +43,6 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
             <div className="mx-3 md:mx-20 lg:mx-30 xl:mx-40 min-h-screen flex flex-col">
                 <Header />
                 <main className="h-full flex-grow">{children}</main>
-                <footer className="pt-10 pb-5 text-center">
-                    <a
-                        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex flex-row items-center mx-auto"
-                    >
-                        <text className="inline-flex dark:text-white">
-                            Powered by{" "}
-                        </text>
-                        <span className="ml-3">
-                            <Image
-                                src="/favicon.ico"
-                                alt="Vercel Logo"
-                                height={30}
-                                width={30}
-                                layout="fixed"
-                            />
-                        </span>
-                    </a>
-                </footer>
             </div>
         </AppStateContext.Provider>
     );
