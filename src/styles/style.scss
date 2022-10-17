@@ -1,2 +1,13 @@
+@import "./custom/custom";
 @import "./home/home";
 @import "./resume/resume";
+
+.stf__parent {
+    // height: 100vh;
+    height: 100%;
+}
+.stf__wrapper {
+    padding-bottom: 0% !important;
+    height: 100%;
+    padding-top: 40px;
+}
