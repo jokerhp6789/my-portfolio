@@ -32,7 +32,7 @@ const Header: React.FC<IHeaderProps> = ({ id }) => {
     return (
         <section className="flex flex-row items-center w-ful justify-between pt-5 pb-7 dark:text-white">
             <Link className="" href={"./"}>
-                <h4 className="text-2xl md:text-3xl cursor-pointer ">Developer</h4>
+                <h4 className="text-2xl md:text-3xl cursor-pointer ">Trung Dev</h4>
             </Link>
             <div className="flex flex-row items-center">
                 <Link className="" href={"./projects"}>
