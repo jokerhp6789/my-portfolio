@@ -62,8 +62,6 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
                     showCover
                     autoSize
                     showPageCorners
-                    onChangeState={(state) => console.log({ state })}
-                    onUpdate={(update) => console.log({ update })}
                     onFlip={(flip) => setActiveIndex(flip?.data)}
                     //@ts-ignore
                     ref={flipRef}
@@ -148,7 +146,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                     return (
                         <div
                             key={`${index}_${label}_${images[0]}`}
-                            className="flex flex-col bg-red-400 col-span-1 border border-1 border-gray-700 px-2 pt-5 cursor-pointer"
+                            className="flex flex-col border border-blue-500 rounded-sm bg-gradient-to-bl from-blue-500 col-span-1 border border-1 border-gray-700 px-2 pt-5 cursor-pointer"
                             onClick={() =>
                                 setOpenModalPreview({
                                     open: true,
@@ -162,7 +160,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                                 className=""
                                 style={{ objectFit: "fill" }}
                             />
-                            <div className="text-center">{label}</div>
+                            <h3 className="text-center py-3 font-bold text-sm">{label}</h3>
                         </div>
                     );
                 })}

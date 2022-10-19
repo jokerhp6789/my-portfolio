@@ -27,7 +27,7 @@ const EmployementItem: React.FC<IEmployementItemProps> = ({
     onClick,
 }) => {
     const icon = (
-        <span className="flex absolute -left-4 justify-center items-center w-7 h-7 bg-blue-200 rounded-full ring-9 ring-white dark:ring-gray-900 dark:bg-blue-900">
+        <span className="flex absolute -left-4 border border-2 border-blue-200 dark:border-blue-500 justify-center items-center w-7 h-7 bg-blue-200 rounded-full  dark:bg-blue-900">
             <svg
                 aria-hidden="true"
                 className="w-3 h-3 text-blue-500 "
@@ -74,7 +74,7 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
     // const [expanding, setExpanding] = useState(false);
     return (
         <li
-            className="mt-3 border border-1 border-blue-200 bg-blue-200 dark:border-blue-900 dark:bg-blue-900 p-3 rounded-md"
+            className="mt-3 border border-blue-200 bg-blue-200 bg-gradient-to-l from-blue-500 dark:border-blue-500 dark:bg-blue-900 p-3 rounded-md"
             onClick={onClick}
         >
             <div className="flex flex-row items-center justify-between dark:text-white">

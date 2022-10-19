@@ -84,7 +84,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
 
     const renderPersonalInfo = () => {
         return (
-            <div className="md:col-span-4 border border-2 border-blue-200 dark:border-blue-900 flex flex-col items-center px-4 py-5 md:p-6 text-white rounded-md">
+            <div className="md:col-span-4 border bg-gradient-to-br from-blue-500 dark:border-blue-500 flex flex-col items-center px-4 py-5 md:p-6 text-white rounded-md">
                 <div className="d-none md:block">
                     <Image
                         src={require("../../../public/images/avatar.jpg")}
@@ -106,7 +106,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                     />
                 </div>
 
-                <div className="text-xl my-3 font-bold text-blue-500 dark:text-blue-200">
+                <div className="text-xl my-3 font-bold text-blue-900 dark:text-blue-200">
                     Do Xuan Trung
                 </div>
                 <div className="flex flex-row gap-3">
@@ -133,7 +133,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     const renderEmpHistory = (
         <React.Fragment>
             {renderTitle("My timeline")}
-            <ol className="relative border-l-2 border-blue-200 dark:border-blue-900 ml-2">
+            <ol className="relative border-l-2 border-blue-200 dark:border-blue-500 ml-2">
                 {RESUME_EMPLOYEMENT_DATA.map(
                     (item: ResumeEmploymentDataType) => {
                         const {

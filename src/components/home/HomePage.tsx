@@ -12,7 +12,7 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
         return (
             <div className="">
                 <section className="mx-auto">
-                    <div className="relative bg-gradient-to-b from-blue-500 rounded-full w-80 h-80 mx-auto mt-20">
+                    <div className="relative border border-blue-200 bg-gradient-to-b from-blue-500 rounded-full w-80 h-80 mx-auto mt-20">
                         <Image
                             src={require("../../../public/images/dev-ed-wave.png")}
                             alt="avatar"
