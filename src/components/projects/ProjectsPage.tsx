@@ -27,13 +27,14 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
         const arrowSize = 50;
         const flipRef = useRef<ElementRef<typeof HTMLFlipBook>>();
         const [activeIndex, setActiveIndex] = useState(0);
+        const { screenType } = data || {};
 
         useEffect(() => {
             let documentHeight = 0;
             let documentWidth = 0;
             const reduceSize =
-                device === "desktop" ? 150 : device === "tablet" ? 100 : 20;
-            const ratio = 210 / 297;
+                device === "desktop" ? 150 : device === "tablet" ? 100 : 50;
+            const ratio = screenType === "mobile" ? 1284 / 2778 : 280 / 180;
             if (width > 576) {
                 documentHeight = height - reduceSize;
                 documentWidth = documentHeight * ratio;
@@ -47,7 +48,7 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
                 width: parseInt(documentWidth.toString()),
                 height: parseInt(documentHeight.toString()),
             });
-        }, [width, height, device]);
+        }, [width, height, device, screenType]);
 
         useEffect(() => {
             setActiveIndex(0);
@@ -60,7 +61,7 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
                 <HTMLFlipBook
                     {...viewSize}
                     showCover
-                    autoSize
+                    // autoSize
                     showPageCorners
                     onFlip={(flip) => setActiveIndex(flip?.data)}
                     //@ts-ignore
@@ -73,7 +74,7 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
                                 src={img}
                                 alt="test"
                                 key={`${index}_${img}`}
-                                style={{ objectFit: "scale-down" }}
+                                style={{ objectFit: "cover" }}
                             />
                         );
                     })}
@@ -146,7 +147,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                     return (
                         <div
                             key={`${index}_${label}_${images[0]}`}
-                            className="flex flex-col border border-blue-500 rounded-sm bg-gradient-to-bl from-blue-500 col-span-1 border border-1 border-gray-700 px-2 pt-5 cursor-pointer"
+                            className="max-h-96 flex flex-col border border-blue-500 rounded-sm bg-gradient-to-bl from-blue-500 col-span-1 border border-1 border-gray-700 px-2 pt-5 cursor-pointer"
                             onClick={() =>
                                 setOpenModalPreview({
                                     open: true,
@@ -154,13 +155,17 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                                 })
                             }
                         >
-                            <img
-                                src={images[0]}
-                                alt={`show_case_image_${label}_${index}`}
-                                className=""
-                                style={{ objectFit: "fill" }}
-                            />
-                            <h3 className="text-center py-3 font-bold text-sm">{label}</h3>
+                            <div className="h-52 sm:h-full overflow-hidden">
+                                <img
+                                    src={images[0]}
+                                    alt={`show_case_image_${label}_${index}`}
+                                    className="h-full w-full"
+                                    style={{ objectFit: "cover" }}
+                                />
+                            </div>
+                            <h3 className="text-center py-3 font-bold text-sm">
+                                {label}
+                            </h3>
                         </div>
                     );
                 })}

@@ -28,11 +28,12 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
         );
     };
 
-    const renderIcon = (icon: any, action: () => any) => {
+    const renderIcon = (icon: any, action: () => any, href?: string) => {
         return (
             <a
                 className=" p-2 rounded-full cursor-pointer bg-blue-200 dark:bg-blue-900"
                 onClick={action}
+                href={href}
             >
                 {icon}
             </a>
@@ -116,15 +117,20 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                             if (window !== undefined) {
                                 navigator.clipboard.writeText("+66917749984");
                             }
-                        }
+                        },
+                        "callto:+66917749984"
                     )}
-                    {renderIcon(<MdEmail className="text-blue-500" />, () => {
-                        if (window !== undefined) {
-                            navigator.clipboard.writeText(
-                                "trung13988@gmail.com"
-                            );
-                        }
-                    })}
+                    {renderIcon(
+                        <MdEmail className="text-blue-500" />,
+                        () => {
+                            if (window !== undefined) {
+                                navigator.clipboard.writeText(
+                                    "trung13988@gmail.com"
+                                );
+                            }
+                        },
+                        "mailto:trung13988@gmail.com"
+                    )}
                 </div>
             </div>
         );

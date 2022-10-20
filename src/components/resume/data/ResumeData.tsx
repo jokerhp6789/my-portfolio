@@ -68,27 +68,6 @@ export const RESUME_EMPLOYEMENT_DATA = [
                 ),
             },
             {
-                label: "Work Infinity X - Admin",
-                iconWeb: "https://hr.workinfinityx.com/",
-                content: (
-                    <React.Fragment>
-                        <p>
-                            - Description: web page for HR to manage company
-                            employees, includes create employee , users,
-                            settings, create and approve employee request,
-                            display and manage employee check time , dashboard
-                            to display and monitor data regards employee’s
-                            working data.
-                        </p>
-                        <p>
-                            - Tech: ReactJS, SCSS , Bootstrap,
-                            GraphQL,Typescript, React-redux,Firebase
-                            Messaging...
-                        </p>
-                    </React.Fragment>
-                ),
-            },
-            {
                 label: "Work Infinity X - Employee Web",
                 iconWeb: " https://bit.ly/3IZJOdc",
                 content: (
@@ -127,6 +106,38 @@ export const RESUME_EMPLOYEMENT_DATA = [
                             - Tech: React
                             Native,GraphQL,Typescript,React-redux,Firebase
                             Messaging, ...
+                        </p>
+                    </React.Fragment>
+                ),
+            },
+            {
+                label: "Mattress City - Admin",
+                iconWeb: "https://bit.ly/3vczEjF",
+                content: (
+                    <React.Fragment>
+                        <p>
+                            - Description: admin page to manage FE site ,create
+                            products, customers, users , admins, roles....
+                        </p>
+                        <p>
+                            - Tech: ReactJS, SCSS , Bootstrap, Rest
+                            API,React-redux...
+                        </p>
+                    </React.Fragment>
+                ),
+            },
+            {
+                label: "Mattress City - Ecomercial",
+                iconWeb: "https://bit.ly/3aWNP5P",
+                content: (
+                    <React.Fragment>
+                        <p>
+                            - Description: e-commercial site for customers to
+                            find products, place orders , make payments... -
+                        </p>
+                        <p>
+                            - Tech: NextJS, Typescript, SCSS , Bootstrap, Oauth,
+                            Rest API,React-redux,...
                         </p>
                     </React.Fragment>
                 ),
