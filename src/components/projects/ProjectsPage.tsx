@@ -84,7 +84,7 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
 
         const renderArrow = () => {
             return (
-                <div className="flex mt-16 md:mt-0 md:absolute right-0 left-0 md:justify-between md:px-16 items-center md:h-full">
+                <div className="flex mt-16 md:mt-0 md:absolute right-0 left-0 md:justify-between md:px-16 items-center md:h-full pointer-events-none">
                     <HiArrowCircleLeft
                         size={arrowSize}
                         onClick={() =>
@@ -92,12 +92,14 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
                             flipRef.current.pageFlip().flipPrev()
                         }
                         color="gray"
+                        className="pointer-events-auto"
                     />
                     <div className="block md:absolute -bottom-5 left-1/2 md:-translate-x-1/2 mx-5">
                         {renderPagination()}
                     </div>
 
                     <HiArrowCircleRight
+                        className="pointer-events-auto"
                         size={arrowSize}
                         onClick={() =>
                             flipRef.current &&
@@ -111,7 +113,7 @@ const PagePreview = React.forwardRef<any, IPagePreviewProps>(
 
         const renderPagination = () => {
             return (
-                <span className="block bg-gray-300 w-10 h-10 text-center rounded-full py-2 font-bold">{`${
+                <span className="block bg-gray-300 w-10 h-10 text-sm text-center rounded-full py-3 font-bold">{`${
                     activeIndex + 1
                 }/${data?.images?.length ?? 0}`}</span>
             );
