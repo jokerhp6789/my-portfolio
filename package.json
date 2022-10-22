@@ -18,7 +18,10 @@
     "react-icons": "^4.4.0",
     "react-modal": "^3.15.1",
     "react-pageflip": "^2.0.3",
-    "sass": "^1.55.0"
+    "react-tsparticles": "^2.3.3",
+    "sass": "^1.55.0",
+    "tsparticles": "^2.3.4",
+    "tsparticles-engine": "^2.3.3"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.186",

@@ -7,6 +7,9 @@ const nextConfig = {
             "www.icloud.com",
             "drive.google.com",
             "lh6.googleusercontent.com",
+            "lh3.googleusercontent.com",
+            "lh5.googleusercontent.com",
+            "lh4.googleusercontent.com",
         ],
     },
 };

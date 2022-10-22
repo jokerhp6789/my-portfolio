@@ -55,7 +55,7 @@ const PersonalInfo: React.FC<IPersonalInfoProps> = ({ id }) => {
         const { showBorder } = options || {};
         return (
             <div
-                className={`flex flex-row items-center w-full justify-between text-sm text-black dark:text-blue-200 py-3 ${ClassNames(
+                className={`flex flex-row items-center w-full justify-between text-sm text-black dark:text-blue-200 py-3 md:py-5 ${ClassNames(
                     {
                         "border-t border-blue-500 border-opacity-60  dark:border-blue-200  dark:border-opacity-30":
                             showBorder,
@@ -88,7 +88,7 @@ const PersonalInfo: React.FC<IPersonalInfoProps> = ({ id }) => {
     const renderInformation = () => {
         return (
             <div
-                className={`w-full expander-content ${ClassNames(
+                className={`w-full expander-content md:mt-12 md:px-6 ${ClassNames(
                     {
                         "expander-content__expanding": expanding,
                         "expander-content__hiding": !expanding,
