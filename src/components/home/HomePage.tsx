@@ -6,6 +6,7 @@ import { FaReact } from "react-icons/fa";
 import { SiNestjs, SiNextdotjs, SiGraphql } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import ViewShowMore from "../../custom/view/ViewShowMore";
 
 export interface IHomePageProps {
     [key: string]: any;
@@ -30,14 +31,17 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
                 <div className="flex flex-col items-center mt-5">
                     <h4 className="text-3xl text-blue-500">Do Xuan Trung</h4>
                     <p className="mt-5 px-3 sm:px-0 md:text-center max-w-md md:max-w-xl dark:text-white">
-                        <span className="font-semibold">Hi</span>, my name is
-                        Trung and you can call me Trump. Coding is my work, my
-                        hobby and my passion.I am always looking for new
-                        challenges, new projects, or some one with similiar
-                        interest to work, to learn and to have fun with along
-                        the way.So if you are also a developer or currently
-                        finding one,please get intouch maybe we can talk , share
-                        some ideas , experiences or can work together.
+                        <ViewShowMore className="">
+                           {`<span className="font-semibold">Hi</span>,my name is
+                            Trung and you can call me Trump. Coding is my work,
+                            my hobby and my passion.I am always looking for new
+                            challenges, new projects, or some one with similiar
+                            interest to work, to learn and to have fun with
+                            along the way.So if you are also a developer or
+                            currently finding one,please get intouch maybe we
+                            can talk , share some ideas , experiences or can
+                            work together.`}
+                        </ViewShowMore>
                     </p>
                 </div>
             </section>
@@ -79,7 +83,10 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
                     </div>
 
                     <div className="flex items-center ml-6 mt-3">
-                        <SiNextdotjs size={30} className="text-blackNext dark:text-white" />
+                        <SiNextdotjs
+                            size={30}
+                            className="text-blackNext dark:text-white"
+                        />
                         <a
                             className="cursor-pointer ml-2"
                             href="https://nextjs.org/"

@@ -149,7 +149,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                     return (
                         <div
                             key={`${index}_${label}_${images[0]}`}
-                            className="max-h-96 flex flex-col border rounded-md border-blue-500 bg-gradient-to-bl from-blue-500 col-span-1 border border-1 border-gray-700 px-3 py-3 cursor-pointer"
+                            className="max-h-96 flex flex-col border rounded-md border-blue-500 bg-gradient-to-bl from-blue-500 col-span-1 border border-1 border-gray-700 p-3 cursor-pointer shadow-md shadow-xl"
                             onClick={() =>
                                 setOpenModalPreview({
                                     open: true,
@@ -157,7 +157,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                                 })
                             }
                         >
-                            <div className="h-52 sm:h-full overflow-hidden rounded-md">
+                            <div className="h-60 sm:h-full overflow-hidden rounded-md">
                                 <img
                                     src={images[0]}
                                     alt={`show_case_image_${label}_${index}`}
@@ -165,7 +165,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                                     style={{ objectFit: "cover" }}
                                 />
                             </div>
-                            <h3 className="text-center mt-3 font-bold text-sm">
+                            <h3 className="text-center mt-2 font-bold text-sm text-blue-900">
                                 {label}
                             </h3>
                         </div>

@@ -48,8 +48,8 @@ const EmployementItem: React.FC<IEmployementItemProps> = ({
             <div className="flex flex-row items-start">
                 {icon}
                 <div className="ml-4">
-                    <h4 className=" text-blue-500 font-medium">{label}</h4>
-                    <time className="block text-sm text-blue-500 dark:text-blue-500 italic font-medium">
+                    <h4 className=" text-blue-500 dark:text-blue-500 font-semibold">{label}</h4>
+                    <time className="block text-sm text-blue-500 dark:text-blue-500 italic font-semibold">
                         {timeRange}
                     </time>
                 </div>

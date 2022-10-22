@@ -152,7 +152,7 @@ export const RESUME_EMPLOYEMENT_DATA = [
         projects: [
             {
                 label: "NSA Global Dashboard",
-                iconWeb: "https://info.salesinfinityx.com/",
+                iconWeb: "https://nsa-global.com/",
                 content: (
                     <React.Fragment>
                         <p>
@@ -171,7 +171,7 @@ export const RESUME_EMPLOYEMENT_DATA = [
             },
             {
                 label: "Camera Works",
-                iconWeb: "https://info.salesinfinityx.com/",
+                iconWeb: "https://www.cameraworks.co.uk/",
                 content: (
                     <React.Fragment>
                         <p>

@@ -1,11 +1,10 @@
-import Image from "next/image";
 import React, { useState } from "react";
-import { AiFillPhone } from "react-icons/ai";
 import { BsApple } from "react-icons/bs";
 import { DiAndroid } from "react-icons/di";
 import { IoMdOpen } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
+import ViewShowMore from "../../custom/view/ViewShowMore";
 import EmployementItem, { ProjectItem } from "./content/EmployementItem";
+import PersonalInfo from "./content/PersonalInfo";
 import {
     ResumeEmploymentDataProjectType,
     ResumeEmploymentDataType,
@@ -28,18 +27,6 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
         );
     };
 
-    const renderIcon = (icon: any, action: () => any, href?: string) => {
-        return (
-            <a
-                className=" p-2 rounded-full cursor-pointer bg-blue-200 dark:bg-blue-900"
-                onClick={action}
-                href={href}
-            >
-                {icon}
-            </a>
-        );
-    };
-
     const renderInfo = () => {
         return (
             <div className="w-full">
@@ -51,7 +38,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     };
 
     const renderTitle = (text: string, className?: string) => (
-        <h3 className={` text-white font-bold block my-1 ${className}`}>
+        <h3 className={`dark:text-white font-bold block my-1 ${className}`}>
             {text}
         </h3>
     );
@@ -83,62 +70,9 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
         );
     };
 
-    const renderPersonalInfo = () => {
-        return (
-            <div className="md:col-span-4 border bg-gradient-to-br from-blue-500 dark:border-blue-500 flex flex-col items-center px-4 py-5 md:p-6 text-white rounded-md">
-                <div className="d-none md:block">
-                    <Image
-                        src={require("../../../public/images/avatar.jpg")}
-                        width={200}
-                        height={200}
-                        layout="fixed"
-                        alt="avatar"
-                        className="rounded-full"
-                    />
-                </div>
-                <div className="block md:hidden">
-                    <Image
-                        src={require("../../../public/images/avatar-mobile.jpg")}
-                        width={125}
-                        height={125}
-                        layout="fixed"
-                        alt="avatar"
-                        className="rounded-full"
-                    />
-                </div>
-
-                <div className="text-xl my-3 font-bold text-blue-900 dark:text-blue-200">
-                    Do Xuan Trung
-                </div>
-                <div className="flex flex-row gap-3">
-                    {renderIcon(
-                        <AiFillPhone className="text-blue-500" />,
-                        () => {
-                            if (window !== undefined) {
-                                navigator.clipboard.writeText("+66917749984");
-                            }
-                        },
-                        "callto:+66917749984"
-                    )}
-                    {renderIcon(
-                        <MdEmail className="text-blue-500" />,
-                        () => {
-                            if (window !== undefined) {
-                                navigator.clipboard.writeText(
-                                    "trung13988@gmail.com"
-                                );
-                            }
-                        },
-                        "mailto:trung13988@gmail.com"
-                    )}
-                </div>
-            </div>
-        );
-    };
-
     const renderEmpHistory = (
         <React.Fragment>
-            {renderTitle("My timeline")}
+            {renderTitle("My timeline", "mt-2")}
             <ol className="relative border-l-2 border-blue-200 dark:border-blue-500 ml-2">
                 {RESUME_EMPLOYEMENT_DATA.map(
                     (item: ResumeEmploymentDataType) => {
@@ -156,7 +90,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                                 description={description}
                                 timeRange={label}
                             >
-                                <label className="text-sm font-bold my-2">
+                                <label className="text-sm font-bold mt-2">
                                     Projects:
                                 </label>
                                 {Array.isArray(projects) && projects?.length > 0
@@ -224,10 +158,11 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-10 md:gap-5 text-base">
-            {renderPersonalInfo()}
+            <PersonalInfo />
             <div className="dark:text-white md:col-span-6">
-                {renderTitle("About myself", "mt-2")}
-                <p className="">
+                {renderTitle("Intro", "mt-2")}
+                <ViewShowMore className="">
+                    {`<p className="">
                     I am always seeking new challenges and ways to solve
                     problems. As part of a team or on my own, I value good
                     communication and teamwork with others from different
@@ -236,7 +171,8 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                     side, I am passionate about photography, travel, aquarium
                     and gardening . When I have time I usually practice , read
                     books , go swimming, go hiking and play video games.
-                </p>
+                </p>`}
+                </ViewShowMore>
                 {renderEmpHistory}
             </div>
         </div>

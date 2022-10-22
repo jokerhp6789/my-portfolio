@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useContext, useEffect } from "react";
 import { BsMoonStarsFill } from "react-icons/bs";
@@ -32,12 +33,23 @@ const Header: React.FC<IHeaderProps> = ({ id }) => {
     return (
         <section className="flex flex-row items-center w-ful justify-between pt-5 pb-7 dark:text-white">
             <Link className="" href={"./"}>
-                <h4 className="text-2xl md:text-3xl cursor-pointer ">Trung Dev</h4>
+                <div className="flex items-center cursor-pointer">
+                    <div className="w-10 h-10 md:w-14 md:h-14">
+                        <img
+                            src="./images/avatar-mobile.jpg"
+                            className="w-full h-full rounded-full"
+                            alt="avatar"
+                        />
+                    </div>
+                    <h4 className="text-base sm:text-2xl ml-3">
+                        Trung-dev
+                    </h4>
+                </div>
             </Link>
             <div className="flex flex-row items-center">
                 <Link className="" href={"./projects"}>
                     <div className="mr-5 cursor-pointer hover:text-blue-500">
-                        Showcase
+                        Features
                     </div>
                 </Link>
                 <Link className="" href={"./resume"}>
