@@ -33,7 +33,7 @@ const ViewShowMore: React.FC<IViewShowMoreProps> = ({
     const renderFooter = () => {
         return (
             <div
-                className="cursor-pointer hover:text-blue-500 font-semibold text-sm dark:text-blue-200 z-10 my-3"
+                className="cursor-pointer hover:text-blue-500 font-semibold text-sm dark:text-blue-200 z-10 my-3 text-center"
                 onClick={() => setShowFull(!showFull)}
             >
                 {showFull ? "Show less <<" : ">> Show more"}
