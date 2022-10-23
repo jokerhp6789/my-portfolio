@@ -15,6 +15,11 @@ export const MYScript = {
         "htps://www.linkedin.com/in/trung-do-xuan-71167b133/",
     ],
     birthPlace: "Haiphong,Vietname",
+    email: "trung13988@gmail.com",
+    gender: "Male",
+    nationality: {
+        name: "Vietnam",
+    },
 };
 
 const SocialSeo: React.FC<ISocialSeoProps> = ({ id }) => {

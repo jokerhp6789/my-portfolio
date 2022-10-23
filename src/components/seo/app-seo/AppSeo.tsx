@@ -4,7 +4,7 @@ import { DefaultSeo, DefaultSeoProps } from "next-seo";
 export interface IAppSeoProps {
     [key: string]: any;
 }
-
+const DefaultTitle = "Do Xuan Trung | Portfolio";
 const DefaultDescription =
     "Fullstack developer  with ReactNative , ReactJs, NextJs & NodeJs";
 
@@ -14,7 +14,7 @@ const DEFAULT_CONFIG_SEO: DefaultSeoProps = {
     description: DefaultDescription,
 
     openGraph: {
-        title: "Do Xuan Trung | Developer",
+        title: DefaultTitle,
         description: DefaultDescription,
         url: "https://www.trung-dev.com/",
         type: "profile",
