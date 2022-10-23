@@ -6,11 +6,7 @@ export interface IProjectProps {
 }
 
 const Projects: React.FC<IProjectProps> = ({ id }) => {
-    return (
-        <div className="bg-red w-full h-full text-white">
-            <ProjectsPage />
-        </div>
-    );
+    return <ProjectsPage />;
 };
 
 export default Projects;

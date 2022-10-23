@@ -142,14 +142,14 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
         data: null,
     });
     return (
-        <React.Fragment>
-            <div className=" dark:text-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-3">
+        <div className="">
+            <div className="dark:text-white grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 lg:gap-5 md:mt-5 lg:px-24">
                 {PROJECTS_DATA.map((project, index) => {
                     const { label, images } = project;
                     return (
                         <div
                             key={`${index}_${label}_${images[0]}`}
-                            className="max-h-96 flex flex-col border rounded-md border-blue-500 bg-gradient-to-bl from-blue-500 col-span-1 border border-1 border-gray-700 p-3 cursor-pointer shadow-md shadow-xl"
+                            className="max-h-96 sm:h-96 flex flex-col border rounded-md border-blue-500 bg-gradient-to-bl from-blue-500 col-span-1 border border-1 md:mt-5  border-gray-700 p-3 lg:p-5 cursor-pointer shadow-md shadow-xl"
                             onClick={() =>
                                 setOpenModalPreview({
                                     open: true,
@@ -165,7 +165,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                                     style={{ objectFit: "cover" }}
                                 />
                             </div>
-                            <h3 className="text-center mt-2 font-bold text-sm text-blue-900">
+                            <h3 className="text-center mt-2 font-bold text-sm text-blue-900 dark:text-white">
                                 {label}
                             </h3>
                         </div>
@@ -181,7 +181,7 @@ const ProjectsPage: React.FC<IProjectsPageProps> = ({}) => {
                     }
                 />
             )}
-        </React.Fragment>
+        </div>
     );
 };
 

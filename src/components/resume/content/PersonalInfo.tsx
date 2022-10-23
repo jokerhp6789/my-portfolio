@@ -113,7 +113,7 @@ const PersonalInfo: React.FC<IPersonalInfoProps> = ({ id }) => {
                     width={200}
                     height={200}
                     layout="fixed"
-                    alt="avatar"
+                    alt="Do Xuan Trung"
                     className="rounded-full"
                 />
             </div>
@@ -123,14 +123,14 @@ const PersonalInfo: React.FC<IPersonalInfoProps> = ({ id }) => {
                     width={125}
                     height={125}
                     layout="fixed"
-                    alt="avatar"
+                    alt="Do Xuan Trung"
                     className="rounded-full"
                 />
             </div>
 
-            <div className="text-xl my-3 font-semibold text-blue-700 dark:text-blue-200 dark:sm:text-blue-200">
+            <h1 className="text-xl my-3 font-semibold text-blue-700 dark:text-blue-200 dark:sm:text-blue-200">
                 Do Xuan Trung
-            </div>
+            </h1>
             <div className="flex flex-row gap-3">
                 {renderIcon(
                     <AiFillPhone className="text-blue-500" />,

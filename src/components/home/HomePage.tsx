@@ -21,7 +21,7 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
                 <div className="relative border border-blue-200 bg-gradient-to-b from-blue-500 rounded-full w-80 h-80 mx-auto mt-5">
                     <Image
                         src={require("../../../public/images/dev-ed-wave.png")}
-                        alt="avatar"
+                        alt="Do Xuan Trung"
                     />
                 </div>
             </section>
@@ -31,7 +31,7 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
         return (
             <section className="mx-auto">
                 <div className="flex flex-col items-center mt-5">
-                    <h4 className="text-3xl text-blue-500">Do Xuan Trung</h4>
+                    <h1 className="text-3xl text-blue-500">Do Xuan Trung</h1>
                     <div className="mt-5 px-3 sm:px-0 md:text-center max-w-md md:max-w-xl dark:text-white">
                         <ViewShowMore className="">
                             {`<span className="font-semibold">Hi</span>,my name is

@@ -38,7 +38,7 @@ const Header: React.FC<IHeaderProps> = ({ id }) => {
                         <img
                             src="./images/avatar-mobile.jpg"
                             className="w-full h-full rounded-full"
-                            alt="avatar"
+                            alt="Do Xuan Trung"
                         />
                     </div>
                     <h4 className="text-base sm:text-2xl ml-3">
