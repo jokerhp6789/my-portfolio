@@ -40,7 +40,7 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
                             challenges, new projects, or some one with similiar
                             interest to work, to learn and to have fun with
                             along the way.So if you are also a developer or
-                            currently finding one,please get intouch maybe we
+                            currently finding one,dont hesitate to get intouch maybe we
                             can talk , share some ideas , experiences or can
                             work together.`}
                         </ViewShowMore>

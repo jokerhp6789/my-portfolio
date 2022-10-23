@@ -5,12 +5,14 @@ export interface IAppSeoProps {
     [key: string]: any;
 }
 
-const DefaultDescription = "Fullstack developer  with ReactNative , ReactJs, NextJs & NodeJs";
+const DefaultDescription =
+    "Fullstack developer  with ReactNative , ReactJs, NextJs & NodeJs";
 
 const DEFAULT_CONFIG_SEO: DefaultSeoProps = {
     title: "Portfolio",
     titleTemplate: "Do Xuan Trung | %s",
     description: DefaultDescription,
+
     openGraph: {
         title: "Open Graph Profile Title",
         description: DefaultDescription,
@@ -25,12 +27,12 @@ const DEFAULT_CONFIG_SEO: DefaultSeoProps = {
             gender: "male",
         },
         images: [
-            {
-                url: "/images/avatar.jpg",
-                width: 850,
-                height: 650,
-                alt: "Profile Photo",
-            },
+            // {
+            //     url: "/images/avatar.jpg",
+            //     width: 850,
+            //     height: 650,
+            //     alt: "Profile Photo",
+            // },
             {
                 url: "/images/avatar-mobile.jpg",
                 width: 850,
@@ -49,10 +51,10 @@ const DEFAULT_CONFIG_SEO: DefaultSeoProps = {
             href: "/images/avatar.jpg",
             rel: "icon",
         },
-        {
-            href: "/images/avatar.jpg",
-            rel: "canonical",
-        },
+    ],
+    additionalMetaTags: [
+        { property: "dc:creator", content: "Do Xuan Trung" },
+        { property: "application-name", content: "trung-dev" },
     ],
 };
 
