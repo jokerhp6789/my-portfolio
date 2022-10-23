@@ -14,7 +14,7 @@ const DEFAULT_CONFIG_SEO: DefaultSeoProps = {
     description: DefaultDescription,
 
     openGraph: {
-        title: "Open Graph Profile Title",
+        title: "Do Xuan Trung | Developer",
         description: DefaultDescription,
         url: "https://www.trung-dev.com/",
         type: "profile",
@@ -27,12 +27,12 @@ const DEFAULT_CONFIG_SEO: DefaultSeoProps = {
             gender: "male",
         },
         images: [
-            // {
-            //     url: "/images/avatar.jpg",
-            //     width: 850,
-            //     height: 650,
-            //     alt: "Profile Photo",
-            // },
+            {
+                url: "/images/avatar.jpg",
+                width: 850,
+                height: 650,
+                alt: "Profile Photo",
+            },
             {
                 url: "/images/avatar-mobile.jpg",
                 width: 850,
