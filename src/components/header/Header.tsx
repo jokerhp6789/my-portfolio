@@ -41,17 +41,15 @@ const Header: React.FC<IHeaderProps> = ({ id }) => {
                             alt="Do Xuan Trung"
                         />
                     </div>
-                    <h4 className="text-base sm:text-2xl ml-3">
-                        Trung-dev
-                    </h4>
+                    <h4 className="text-base sm:text-2xl ml-3">Trung-dev</h4>
                 </div>
             </Link>
             <div className="flex flex-row items-center">
-                <Link className="" href={"./projects"}>
+                {/* <Link className="" href={"./projects"}>
                     <div className="mr-5 cursor-pointer hover:text-blue-500">
                         Features
                     </div>
-                </Link>
+                </Link> */}
                 <Link className="" href={"./resume"}>
                     <div className="cursor-pointer hover:text-blue-500">
                         Resume
