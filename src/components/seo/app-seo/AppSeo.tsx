@@ -19,11 +19,11 @@ const DEFAULT_CONFIG_SEO: DefaultSeoProps = {
         url: "https://www.trung-dev.com/",
         type: "profile",
         locale: "en_IE",
-        siteName: "trung-dev",
+        siteName: "trung dev",
         profile: {
             firstName: "Trung",
             lastName: "Do Xuan",
-            username: "trung-dev",
+            username: "trung dev",
             gender: "male",
         },
         images: [
