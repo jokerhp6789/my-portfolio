@@ -3,7 +3,7 @@ import ClassNames from "classnames";
 import { MdArrowDropDownCircle } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-export interface IEmployementItemProps {
+export interface IEmploymentItemProps {
     label?: string;
     timeRange?: string;
     description?: string;
@@ -19,7 +19,7 @@ export interface IProjectItemProps {
     expanding?: boolean;
 }
 
-const EmployementItem: React.FC<IEmployementItemProps> = ({
+const EmploymentItem: React.FC<IEmploymentItemProps> = ({
     label,
     timeRange,
     description,
@@ -48,7 +48,9 @@ const EmployementItem: React.FC<IEmployementItemProps> = ({
             <div className="flex flex-row items-start">
                 {icon}
                 <div className="ml-4">
-                    <h4 className=" text-blue-500 dark:text-blue-500 font-semibold">{label}</h4>
+                    <h4 className=" text-blue-500 dark:text-blue-500 font-semibold">
+                        {label}
+                    </h4>
                     <time className="block text-sm text-blue-500 dark:text-blue-500 italic font-semibold">
                         {timeRange}
                     </time>
@@ -62,7 +64,7 @@ const EmployementItem: React.FC<IEmployementItemProps> = ({
     );
 };
 
-export default EmployementItem;
+export default EmploymentItem;
 
 export const ProjectItem: React.FC<IProjectItemProps> = ({
     label,

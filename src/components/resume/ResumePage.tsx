@@ -3,7 +3,7 @@ import { BsApple } from "react-icons/bs";
 import { DiAndroid } from "react-icons/di";
 import { IoMdOpen } from "react-icons/io";
 import ViewShowMore from "../../custom/view/ViewShowMore";
-import EmployementItem, { ProjectItem } from "./content/EmployementItem";
+import EmploymentItem, { ProjectItem } from "./content/EmployementItem";
 import PersonalInfo from "./content/PersonalInfo";
 import {
     ResumeEmploymentDataProjectType,
@@ -84,7 +84,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                         } = item || {};
                         const empId = `${label}_${timeRange}_${description}`;
                         return (
-                            <EmployementItem
+                            <EmploymentItem
                                 key={empId}
                                 label={timeRange}
                                 description={description}
@@ -148,7 +148,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                                           }
                                       )
                                     : projects}
-                            </EmployementItem>
+                            </EmploymentItem>
                         );
                     }
                 )}
@@ -164,7 +164,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                 <ViewShowMore className="">
                     {`<p className="">
                   - As a full stack developer with expertise in React, React Native, and NodeJs, I have a strong foundation in both front-end and back-end development. 
-                  I have more than 5 years of experience in FE side. I have a passion for creating intuitive and engaging user experiences, and I enjoy using React to build responsive and dynamic web applications. Additionally, my experience with React Native has allowed me to create native mobile apps for both iOS and Android using the same codebase. 
+                  I have more than 5 years of experience in FE side. I have a passion for creating intuitive and engaging user experiences, and I enjoy using React to build responsive and dynamic web applications. Additionally, my experience with React Native has allowed me to create native mobile apps for both iOS and Android using the same codebase. \n
                   On the back-end, I have extensive experience with NodeJs and am comfortable working with server-side JavaScript to build scalable and efficient APIs. With this skill set, I am well-equipped to develop full-stack applications that deliver a seamless experience across multiple platforms
                 </p>`}
                 </ViewShowMore>
