@@ -163,14 +163,9 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                 {renderTitle("Intro", "mt-2")}
                 <ViewShowMore className="">
                     {`<p className="">
-                    I am always seeking new challenges and ways to solve
-                    problems. As part of a team or on my own, I value good
-                    communication and teamwork with others from different
-                    backgrounds. My goal is to help people as much as possible
-                    using my technical expertise and skills. On the personal
-                    side, I am passionate about photography, travel, aquarium
-                    and gardening . When I have time I usually practice , read
-                    books , go swimming, go hiking and play video games.
+                  - As a full stack developer with expertise in React, React Native, and NodeJs, I have a strong foundation in both front-end and back-end development. 
+                  I have more than 5 years of experience in FE side. I have a passion for creating intuitive and engaging user experiences, and I enjoy using React to build responsive and dynamic web applications. Additionally, my experience with React Native has allowed me to create native mobile apps for both iOS and Android using the same codebase. 
+                  On the back-end, I have extensive experience with NodeJs and am comfortable working with server-side JavaScript to build scalable and efficient APIs. With this skill set, I am well-equipped to develop full-stack applications that deliver a seamless experience across multiple platforms
                 </p>`}
                 </ViewShowMore>
                 {renderEmpHistory}
