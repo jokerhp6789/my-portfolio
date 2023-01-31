@@ -8,7 +8,7 @@ import PersonalInfo from "./content/PersonalInfo";
 import {
     ResumeEmploymentDataProjectType,
     ResumeEmploymentDataType,
-    RESUME_EMPLOYEMENT_DATA,
+    RESUME_EMPLOYMENT_DATA,
 } from "./data/ResumeData";
 
 export interface IResumePageProps {
@@ -74,7 +74,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
         <React.Fragment>
             {renderTitle("My timeline", "mt-2")}
             <ol className="relative border-l-2 border-blue-200 dark:border-blue-500 ml-2">
-                {RESUME_EMPLOYEMENT_DATA.map(
+                {RESUME_EMPLOYMENT_DATA.map(
                     (item: ResumeEmploymentDataType) => {
                         const {
                             label,

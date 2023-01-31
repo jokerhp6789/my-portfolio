@@ -1,12 +1,40 @@
 import React from "react";
 
-export const RESUME_EMPLOYEMENT_DATA = [
+export const RESUME_EMPLOYMENT_DATA = [
     {
         label: "Software Developer at Lotus Bedding Groups, Bangkok",
         timeRange: "FEBRUARY 2020 — PRESENT",
         description:
             "Working as software developer, create and maintain company's websites and applications",
         projects: [
+            {
+                label: "De Hygienique - Customer App - ( Processing upload to App & Play Store )",
+                content: (
+                    <React.Fragment>
+                        <p>
+                            - Description:De Hygienique provide cleaning service for customer around Bangkok and some other provinces in Thailand.This application help customer to create booking ,manage vouchers , order history and edit and view their profile. 
+                        </p>
+                        <p>
+                            - Tech: React Native, GraphQl ,React-redux,Firebase
+                            Messaging, ...
+                        </p>
+                    </React.Fragment>
+                ),
+            },
+            {
+                label: "De Hygienique - Technical App - ( Processing upload to App & Play Store )",
+                content: (
+                    <React.Fragment>
+                        <p>
+                            - Description:De Hygienique provide cleaning service for customer around Bangkok and some other provinces in Thailand.This application help the employee to create and manage their works ,schedule, bookings and orders. It also integrated with the Work Infinity System so employee can login to this app from the Work Infinity X App.
+                        </p>
+                        <p>
+                            - Tech: React Native, GraphQl ,React-redux,Firebase
+                            Messaging, ...
+                        </p>
+                    </React.Fragment>
+                ),
+            },
             {
                 label: "Sale Infinity X - Web",
                 iconWeb: "https://info.salesinfinityx.com/",
@@ -245,8 +273,8 @@ export const RESUME_EMPLOYEMENT_DATA = [
 ];
 
 export declare type ResumeEmploymentDataType =
-    typeof RESUME_EMPLOYEMENT_DATA[0];
+    typeof RESUME_EMPLOYMENT_DATA[0];
 
-const PROJECT = RESUME_EMPLOYEMENT_DATA[0].projects[1];
+const PROJECT = RESUME_EMPLOYMENT_DATA[0].projects[1];
 
 export declare type ResumeEmploymentDataProjectType = typeof PROJECT;
