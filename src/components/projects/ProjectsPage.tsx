@@ -5,7 +5,7 @@ import React, { ElementRef, useEffect, useRef, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
 import { IoMdCloseCircle } from "react-icons/io";
-import Modal, { IModalProps } from "../../custom/modal/Modal";
+import Modal, { IModalProps } from "../../common/modal/Modal";
 import { useDevice } from "../../utils/hooks/useMedia";
 import { useWindowSize } from "../../utils/hooks/useWindowSize";
 import PROJECTS_DATA from "./data/ProjectsData";

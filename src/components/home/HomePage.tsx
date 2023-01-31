@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { AiFillGitlab } from "react-icons/ai";
 import { BsFillHddStackFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
@@ -7,8 +7,8 @@ import { SiNestjs, SiNextdotjs, SiGraphql } from "react-icons/si";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { DiMongodb } from "react-icons/di";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import ViewShowMore from "../../custom/view/ViewShowMore";
-import ReactParticles from "../../custom/particles/ReactParticles";
+import ViewShowMore from "../../common/view/ViewShowMore";
+import ReactParticles from "../../common/particles/ReactParticles";
 
 export interface IHomePageProps {
     [key: string]: any;
@@ -136,7 +136,7 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
         );
     };
 
-    const renderSocail = () => {
+    const renderSocial = () => {
         return (
             <section className="relative w-full h-40 mt-3 md:mt-10">
                 <div className="w-full flex justify-center items-center z-10">
@@ -181,17 +181,26 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
     const renderFooter = () => {
         return (
             <div className="flex flex-col w-full md:flex-row mt-20 gap-5 md:gap-5">
-                <Image
+                {/* <Image
                     src={require("../../../public/images/web1.png")}
                     className=""
                 />
                 <Image
                     src={require("../../../public/images/web2.png")}
                     className=""
-                />
+                /> */}
             </div>
         );
     };
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => testSetInterval(), 3000);
+    //     return () => clearInterval(interval);
+    // }, []);
+
+    // function testSetInterval() {
+    //     console.log("Get in interval", new Date().valueOf());
+    // }
 
     return (
         <div className="flex flex-col items-center">
@@ -199,7 +208,7 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
             {renderIntro()}
             <div className="relative w-full">
                 {renderStack()}
-                {renderSocail()}
+                {renderSocial()}
                 <ReactParticles />
             </div>
         </div>

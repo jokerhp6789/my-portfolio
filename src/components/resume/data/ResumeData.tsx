@@ -8,11 +8,15 @@ export const RESUME_EMPLOYMENT_DATA = [
             "Working as software developer, create and maintain company's websites and applications",
         projects: [
             {
-                label: "De Hygienique - Customer App - ( Processing upload to App & Play Store )",
+                label: "De Hygienique - Customer App - ( Processing upload to Apple & Play Store )",
                 content: (
                     <React.Fragment>
                         <p>
-                            - Description:De Hygienique provide cleaning service for customer around Bangkok and some other provinces in Thailand.This application help customer to create booking ,manage vouchers , order history and edit and view their profile. 
+                            - Description:De Hygienique provide cleaning service
+                            for customer around Bangkok and some other provinces
+                            in Thailand.This application help customer to create
+                            booking ,manage vouchers , order history and edit
+                            and view their profile.
                         </p>
                         <p>
                             - Tech: React Native, GraphQl ,React-redux,Firebase
@@ -20,13 +24,53 @@ export const RESUME_EMPLOYMENT_DATA = [
                         </p>
                     </React.Fragment>
                 ),
+                images: [
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9331.png"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9331.png"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9895.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9895.PNG"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9896.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9896.PNG"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9897.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9897.PNG"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9898.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9898.PNG"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9899.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9899.PNG"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9900.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9900.PNG"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/customer-app/IMG_9901.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/customer-app/IMG_9901.PNG"),
+                    },
+                ],
             },
             {
-                label: "De Hygienique - Technical App - ( Processing upload to App & Play Store )",
+                label: "De Hygienique - Technical App - ( Processing upload to Apple & Play Store )",
                 content: (
                     <React.Fragment>
                         <p>
-                            - Description:De Hygienique provide cleaning service for customer around Bangkok and some other provinces in Thailand.This application help the employee to create and manage their works ,schedule, bookings and orders. It also integrated with the Work Infinity System so employee can login to this app from the Work Infinity X App.
+                            - Description:De Hygienique provide cleaning service
+                            for customer around Bangkok and some other provinces
+                            in Thailand.This application help the employee to
+                            create and manage their works ,schedule, bookings
+                            and orders. It also integrated with the Work
+                            Infinity System so employee can login to this app
+                            from the Work Infinity X App.
                         </p>
                         <p>
                             - Tech: React Native, GraphQl ,React-redux,Firebase
@@ -272,8 +316,7 @@ export const RESUME_EMPLOYMENT_DATA = [
     },
 ];
 
-export declare type ResumeEmploymentDataType =
-    typeof RESUME_EMPLOYMENT_DATA[0];
+export declare type ResumeEmploymentDataType = typeof RESUME_EMPLOYMENT_DATA[0];
 
 const PROJECT = RESUME_EMPLOYMENT_DATA[0].projects[1];
 

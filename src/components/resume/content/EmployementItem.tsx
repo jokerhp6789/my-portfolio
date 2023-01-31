@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ClassNames from "classnames";
 import { MdArrowDropDownCircle } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { isEmpty } from "lodash";
+import ImageCarousel from "../../../common/images/ImageCarousel";
 
 export interface IEmploymentItemProps {
     label?: string;
@@ -17,6 +19,7 @@ export interface IProjectItemProps {
     children?: any;
     onClick?: () => void;
     expanding?: boolean;
+    images?: Array<any>;
 }
 
 const EmploymentItem: React.FC<IEmploymentItemProps> = ({
@@ -72,18 +75,16 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
     children,
     onClick,
     expanding,
+    images,
 }) => {
-    // const [expanding, setExpanding] = useState(false);
     return (
-        <li
-            className="mt-3 border border-blue-200 bg-blue-200 bg-gradient-to-l from-blue-500 dark:border-blue-500 dark:bg-blue-900 p-3 rounded-md"
-            onClick={onClick}
-        >
-            <div className="flex flex-row items-center justify-between dark:text-white">
+        <li className="mt-3 border border-blue-200 bg-blue-200 bg-gradient-to-l from-blue-500 dark:border-blue-500 dark:bg-blue-900 p-3 rounded-md">
+            <div
+                className="flex flex-row items-center justify-between dark:text-white"
+                onClick={onClick}
+            >
                 <div className="flex flex-row items-center">
-                    <h4 className="text-sm font-bold whitespace-nowrap">
-                        {label}
-                    </h4>
+                    <h4 className="text-sm font-bold ">{label}</h4>
                     {icon}
                 </div>
                 <IoMdArrowDropdown
@@ -102,6 +103,14 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
                 })}`}
             >
                 {children}
+                {!isEmpty(images) && images && (
+                    <div>
+                        <label className="mb-3 block"> - Gallery:</label>
+                        <div className="lg:w-1/2 md:h-auto">
+                            <ImageCarousel items={images} />
+                        </div>
+                    </div>
+                )}
             </div>
         </li>
     );

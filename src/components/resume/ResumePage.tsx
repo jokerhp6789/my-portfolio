@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BsApple } from "react-icons/bs";
 import { DiAndroid } from "react-icons/di";
 import { IoMdOpen } from "react-icons/io";
-import ViewShowMore from "../../custom/view/ViewShowMore";
+import ViewShowMore from "../../common/view/ViewShowMore";
 import EmploymentItem, { ProjectItem } from "./content/EmployementItem";
 import PersonalInfo from "./content/PersonalInfo";
 import {
@@ -16,7 +16,7 @@ export interface IResumePageProps {
 }
 
 const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
-    const [activeExpanding, setactiveExpanding] = useState<string>();
+    const [activeExpanding, setActiveExpanding] = useState<string>();
 
     const renderRow = (label: string, content: string) => {
         return (
@@ -104,26 +104,27 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                                                   iconWeb,
                                                   content,
                                                   label: projectLabel,
+                                                  images,
                                               } = project as any;
                                               const projectId = `${empId}_${iconWeb}_${iconAndroidIos}_${projectLabel}_${index}`;
-                                              const isExpading =
+                                              const isExpanding =
                                                   projectId === activeExpanding;
                                               return (
                                                   <ProjectItem
-                                                      expanding={isExpading}
+                                                      expanding={isExpanding}
                                                       key={projectId}
                                                       onClick={() => {
-                                                          if (isExpading) {
-                                                              return setactiveExpanding(
+                                                          if (isExpanding) {
+                                                              return setActiveExpanding(
                                                                   undefined
                                                               );
                                                           }
-                                                          setactiveExpanding(
+                                                          setActiveExpanding(
                                                               undefined
                                                           );
                                                           setTimeout(
                                                               () =>
-                                                                  setactiveExpanding(
+                                                                  setActiveExpanding(
                                                                       projectId
                                                                   ),
                                                               350
@@ -141,6 +142,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                                                                 )
                                                               : null
                                                       }
+                                                      images={images}
                                                   >
                                                       {content}
                                                   </ProjectItem>
