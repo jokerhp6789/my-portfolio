@@ -80,7 +80,7 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
     return (
         <li className="mt-3 border border-blue-200 bg-blue-200 bg-gradient-to-l from-blue-500 dark:border-blue-500 dark:bg-blue-900 p-3 rounded-md">
             <div
-                className="flex flex-row items-center justify-between dark:text-white"
+                className="flex flex-row items-center justify-between dark:text-white hover:cursor-pointer"
                 onClick={onClick}
             >
                 <div className="flex flex-row items-center">
@@ -106,8 +106,10 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
                 {!isEmpty(images) && images && (
                     <div>
                         <label className="mb-3 block"> - Gallery:</label>
-                        <div className="lg:w-1/2 md:h-auto">
-                            <ImageCarousel items={images} />
+                        <div className="flex align-middle justify-center my-4">
+                            <div className="md:w-1/2">
+                                <ImageCarousel items={images} />
+                            </div>
                         </div>
                     </div>
                 )}

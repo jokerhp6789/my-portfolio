@@ -78,6 +78,32 @@ export const RESUME_EMPLOYMENT_DATA = [
                         </p>
                     </React.Fragment>
                 ),
+                images: [
+                    {
+                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9902.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9902.png"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9903.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9903.png"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9904.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9904.png"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9906.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9906.png"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9907.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9907.png"),
+                    },
+                    {
+                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9908.PNG"),
+                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9908.png"),
+                    },
+                ],
             },
             {
                 label: "Sale Infinity X - Web",
@@ -199,7 +225,7 @@ export const RESUME_EMPLOYMENT_DATA = [
                 ),
             },
             {
-                label: "Mattress City - Ecomercial",
+                label: "Mattress City - Ecommerce",
                 iconWeb: "https://bit.ly/3aWNP5P",
                 content: (
                     <React.Fragment>
@@ -213,6 +239,28 @@ export const RESUME_EMPLOYMENT_DATA = [
                         </p>
                     </React.Fragment>
                 ),
+                images: [
+                    {
+                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.46.51.png"),
+                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.46.51.png"),
+                    },
+                    {
+                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.47.16.png"),
+                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.47.16.png"),
+                    },
+                    {
+                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.48.11.png"),
+                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.48.11.png"),
+                    },
+                    {
+                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.28.png"),
+                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.28.png"),
+                    },
+                    {
+                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.35.png"),
+                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.35.png"),
+                    },
+                ],
             },
         ],
     },

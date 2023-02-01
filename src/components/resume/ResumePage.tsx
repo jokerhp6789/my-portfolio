@@ -159,9 +159,9 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     );
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-10 md:gap-5 text-base">
+        <div className="grid grid-cols-1 lg:grid-cols-10 md:gap-5 text-base">
             <PersonalInfo />
-            <div className="dark:text-white md:col-span-6">
+            <div className="dark:text-white lg:col-span-6">
                 {renderTitle("Intro", "mt-2")}
                 <ViewShowMore className="">
                     {`<p className="">
@@ -172,6 +172,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                 </ViewShowMore>
                 {renderEmpHistory}
             </div>
+            <div className="h-24" />
         </div>
     );
 };

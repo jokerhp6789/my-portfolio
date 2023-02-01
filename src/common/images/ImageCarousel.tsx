@@ -48,12 +48,13 @@ const ImageCarousel: React.ForwardRefRenderFunction<
     return (
         <ImageGallery
             items={items}
-            {...rest}
             renderItem={(item) => <Image src={item?.original} />}
+            renderThumbInner={(item) => <Image src={item?.original} />}
             infinite
             showIndex={false}
             showThumbnails={false}
             autoPlay={false}
+            {...rest}
             ref={galleryRef}
         />
     );
