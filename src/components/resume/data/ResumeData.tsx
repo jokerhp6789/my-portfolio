@@ -78,32 +78,32 @@ export const RESUME_EMPLOYMENT_DATA = [
                         </p>
                     </React.Fragment>
                 ),
-                images: [
-                    {
-                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9902.PNG"),
-                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9902.png"),
-                    },
-                    {
-                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9903.PNG"),
-                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9903.png"),
-                    },
-                    {
-                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9904.PNG"),
-                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9904.png"),
-                    },
-                    {
-                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9906.PNG"),
-                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9906.png"),
-                    },
-                    {
-                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9907.PNG"),
-                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9907.png"),
-                    },
-                    {
-                        original: require("public/images/projects/de-hygienique/technical-app/IMG_9908.PNG"),
-                        thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9908.png"),
-                    },
-                ],
+                // images: [
+                //     {
+                //         original: require("public/images/projects/de-hygienique/technical-app/IMG_9902.PNG"),
+                //         thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9902.png"),
+                //     },
+                //     {
+                //         original: require("public/images/projects/de-hygienique/technical-app/IMG_9903.PNG"),
+                //         thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9903.png"),
+                //     },
+                //     {
+                //         original: require("public/images/projects/de-hygienique/technical-app/IMG_9904.PNG"),
+                //         thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9904.png"),
+                //     },
+                //     {
+                //         original: require("public/images/projects/de-hygienique/technical-app/IMG_9906.PNG"),
+                //         thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9906.png"),
+                //     },
+                //     {
+                //         original: require("public/images/projects/de-hygienique/technical-app/IMG_9907.PNG"),
+                //         thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9907.png"),
+                //     },
+                //     {
+                //         original: require("public/images/projects/de-hygienique/technical-app/IMG_9908.PNG"),
+                //         thumbnail: require("public/images/projects/de-hygienique/technical-app/IMG_9908.png"),
+                //     },
+                // ],
             },
             {
                 label: "Sale Infinity X - Web",
