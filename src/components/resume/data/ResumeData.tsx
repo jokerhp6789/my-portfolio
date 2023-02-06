@@ -239,28 +239,6 @@ export const RESUME_EMPLOYMENT_DATA = [
                         </p>
                     </React.Fragment>
                 ),
-                images: [
-                    {
-                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.46.51.png"),
-                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.46.51.png"),
-                    },
-                    {
-                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.47.16.png"),
-                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.47.16.png"),
-                    },
-                    {
-                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.48.11.png"),
-                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.48.11.png"),
-                    },
-                    {
-                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.28.png"),
-                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.28.png"),
-                    },
-                    {
-                        original: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.35.png"),
-                        thumbnail: require("public/images/projects/mattrresscity/fe/Screen Shot 2022-07-03 at 20.52.35.png"),
-                    },
-                ],
             },
         ],
     },
