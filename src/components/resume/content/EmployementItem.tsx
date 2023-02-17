@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ClassNames from "classnames";
 import { MdArrowDropDownCircle } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -21,6 +21,44 @@ export interface IProjectItemProps {
     expanding?: boolean;
     images?: Array<any>;
 }
+
+function generateRandom(min = 0, max = 20) {
+    // find diff
+    let difference = max - min;
+    // generate random number
+    let rand = Math.random();
+    // multiply with difference
+    rand = Math.floor(rand * difference);
+    // add with min value
+    rand = rand + min;
+    return rand;
+}
+
+const AOS_ANIMATION = [
+    "fade-up",
+    "fade-down",
+    "fade-right",
+    "fade-left",
+    "fade-up-right",
+    "fade-up-left",
+    "fade-down-right",
+    "fade-down-left",
+    "fade-down-right",
+    "flip-up",
+    "flip-down",
+    "flip-right",
+    "flip-left",
+    "zoom-in",
+    "zoom-in-up",
+    "zoom-in-down",
+    "zoom-in-left",
+    "zoom-in-right",
+    "zoom-out",
+    "zoom-out-up",
+    "zoom-out-down",
+    "zoom-out-left",
+    "zoom-out-right",
+];
 
 const EmploymentItem: React.FC<IEmploymentItemProps> = ({
     label,
@@ -46,8 +84,14 @@ const EmploymentItem: React.FC<IEmploymentItemProps> = ({
             </svg>
         </span>
     );
+    const [aosAnimation, setAosAnimation] = useState<string | null>(null);
+    useEffect(() => {
+        const randomNo = generateRandom();
+        setAosAnimation(AOS_ANIMATION?.[randomNo]);
+    }, []);
+
     return (
-        <li className="mt-3">
+        <li className="mt-3" data-aos={aosAnimation || "flip-down"}>
             <div className="flex flex-row items-start">
                 {icon}
                 <div className="ml-4">
@@ -77,8 +121,17 @@ export const ProjectItem: React.FC<IProjectItemProps> = ({
     expanding,
     images,
 }) => {
+    const [aosAnimation, setAosAnimation] = useState<string | null>(null);
+    useEffect(() => {
+        const randomNo = generateRandom();
+        setAosAnimation(AOS_ANIMATION?.[randomNo]);
+    }, []);
+
     return (
-        <li className="mt-3 border border-blue-200 bg-blue-200 bg-gradient-to-l from-blue-500 dark:border-blue-500 dark:bg-blue-900 p-3 rounded-md">
+        <li
+            className="mt-3 border border-blue-200 bg-blue-200 bg-gradient-to-l from-blue-500 dark:border-blue-500 dark:bg-blue-900 p-3 rounded-md"
+            data-aos={aosAnimation || "zoom-in-out"}
+        >
             <div
                 className="flex flex-row items-center justify-between dark:text-white hover:cursor-pointer"
                 onClick={onClick}
