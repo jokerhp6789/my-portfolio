@@ -71,9 +71,9 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     };
 
     const renderEmpHistory = (
-        <React.Fragment>
+        <div className="overflow-hidden">
             {renderTitle("My timeline", "mt-2")}
-            <ol className="relative border-l-2 border-blue-200 dark:border-blue-500 ml-2">
+            <ol className="relative border-l-2 border-blue-200 dark:border-blue-500 md:ml-2">
                 {RESUME_EMPLOYMENT_DATA.map(
                     (item: ResumeEmploymentDataType) => {
                         const {
@@ -155,7 +155,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                     }
                 )}
             </ol>
-        </React.Fragment>
+        </div>
     );
 
     return (

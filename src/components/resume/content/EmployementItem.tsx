@@ -68,7 +68,7 @@ const EmploymentItem: React.FC<IEmploymentItemProps> = ({
     onClick,
 }) => {
     const icon = (
-        <span className="flex absolute -left-4 border border-2 border-blue-200 dark:border-blue-500 justify-center items-center w-7 h-7 bg-blue-200 rounded-full  dark:bg-blue-900">
+        <span className="flex absolute -left-4 border-2 border-blue-200 dark:border-blue-500 justify-center items-center w-7 h-7 bg-blue-200 rounded-full  dark:bg-blue-900">
             <svg
                 aria-hidden="true"
                 className="w-3 h-3 text-blue-500 "
@@ -91,7 +91,10 @@ const EmploymentItem: React.FC<IEmploymentItemProps> = ({
     }, []);
 
     return (
-        <li className="mt-3" data-aos={aosAnimation || "flip-down"}>
+        <li
+            className="mt-3"
+            data-aos={aosAnimation || "flip-down"}
+        >
             <div className="flex flex-row items-start">
                 {icon}
                 <div className="ml-4">
