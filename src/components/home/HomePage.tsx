@@ -31,18 +31,13 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
         return (
             <section className="mx-auto">
                 <div className="flex flex-col items-center mt-5">
-                    <h1 className="text-3xl text-blue-500 text-focus-in">Do Xuan Trung</h1>
+                    <h1 className="text-3xl text-blue-500 text-focus-in">
+                        Do Xuan Trung
+                    </h1>
                     <div className="mt-5 px-3 sm:px-0 md:text-center max-w-md md:max-w-xl dark:text-white text-focus-in">
                         <ViewShowMore className="">
                             {`<span className="font-semibold">Hi</span>,my name is
-                            Trung and you can call me Trump. Coding is my work,
-                            my hobby and my passion.I am always looking for new
-                            challenges, new projects, or some one with similiar
-                            interest to work, to learn and to have fun with
-                            along the way.So if you are also a developer or
-                            currently finding one,dont hesitate to get intouch maybe we
-                            can talk , share some ideas , experiences or can
-                            work together.`}
+                            Trung, currently working as full-stack developer in Bangkok,Thailand. I enjoy coding and have been working in this field for the past 6 years. If you are looking for someone to help you to build a website, mobile apps or APIs , don't hesitate to contact me , I will try my best to delivery a high quality result for you !`}
                         </ViewShowMore>
                     </div>
                 </div>
