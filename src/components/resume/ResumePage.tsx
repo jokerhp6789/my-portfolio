@@ -71,7 +71,7 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     };
 
     const renderEmpHistory = (
-        <div className="overflow-hidden">
+        <div className="">
             {renderTitle("My timeline", "mt-2")}
             <ol className="relative border-l-2 border-blue-200 dark:border-blue-500 md:ml-2">
                 {RESUME_EMPLOYMENT_DATA.map(
@@ -159,11 +159,11 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     );
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-10 md:gap-5 text-base">
+        <div className="grid grid-cols-1 lg:grid-cols-10 md:gap-5 text-base overflow-hidden">
             <PersonalInfo />
             <div className="dark:text-white lg:col-span-6">
-                {renderTitle("Intro", "mt-2")}
-                <ViewShowMore className="">
+                {renderTitle("Intro", "text-focus-in mt-2")}
+                <ViewShowMore className="text-focus-in">
                     {`<p className="">
                   - As a full stack developer with expertise in React, React Native, and NodeJs, I have a strong foundation in both front-end and back-end development. 
                   I have more than 5 years of experience in FE side. I have a passion for creating intuitive and engaging user experiences, and I enjoy using React to build responsive and dynamic web applications. Additionally, my experience with React Native has allowed me to create native mobile apps for both iOS and Android using the same codebase. \n

@@ -106,7 +106,7 @@ const PersonalInfo: React.FC<IPersonalInfoProps> = ({ id }) => {
     };
 
     return (
-        <div className="lg:col-span-4 border bg-gradient-to-br from-blue-500 dark:border-blue-500 flex flex-col items-center px-4 py-5 md:py-6 text-white rounded-md">
+        <div className="lg:col-span-4 border bg-gradient-to-br from-blue-500 dark:border-blue-500 flex flex-col items-center px-4 py-5 md:py-6 text-white rounded-md puff-in-center">
             <div className="d-none md:block">
                 <Image
                     src="/images/avatar.jpg"
