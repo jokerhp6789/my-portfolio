@@ -68,7 +68,7 @@ const EmploymentItem: React.FC<IEmploymentItemProps> = ({
     onClick,
 }) => {
     const icon = (
-        <span className="flex absolute -left-4 border-2 border-blue-200 dark:border-blue-500 justify-center items-center w-7 h-7 bg-blue-200 rounded-full  dark:bg-blue-900">
+        <span className="flex absolute -left-3 border-2 border-blue-200 dark:border-blue-500 justify-center items-center w-7 h-7 bg-blue-200 rounded-full  dark:bg-blue-900 z-10">
             <svg
                 aria-hidden="true"
                 className="w-3 h-3 text-blue-500 "
@@ -93,11 +93,10 @@ const EmploymentItem: React.FC<IEmploymentItemProps> = ({
     return (
         <li
             className="mt-3"
-            data-aos={aosAnimation || "flip-down"}
         >
-            <div className="flex flex-row items-start">
+            <div className="flex flex-row items-start relative z-10">
                 {icon}
-                <div className="ml-4">
+                <div className="pl-5">
                     <h4 className=" text-blue-500 dark:text-blue-500 font-semibold">
                         {label}
                     </h4>
@@ -106,7 +105,7 @@ const EmploymentItem: React.FC<IEmploymentItemProps> = ({
                     </time>
                 </div>
             </div>
-            <div className="ml-4 mt-1">
+            <div className="pl-4 mt-1">
                 <p className="text">{description}</p>
                 {children}
             </div>

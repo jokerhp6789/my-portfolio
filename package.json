@@ -1,47 +1,51 @@
 {
-  "name": "my-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "aos": "^3.0.0-beta.6",
-    "classnames": "^2.3.2",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.4",
-    "next": "12.3.1",
-    "next-seo": "^5.8.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "react-image-gallery": "^1.2.11",
-    "react-modal": "^3.15.1",
-    "react-pageflip": "^2.0.3",
-    "react-responsive-carousel": "^3.2.23",
-    "react-scroll": "^1.8.8",
-    "react-tsparticles": "^2.3.3",
-    "sass": "^1.55.0",
-    "tsparticles": "^2.3.4",
-    "tsparticles-engine": "^2.3.3"
-  },
-  "devDependencies": {
-    "@types/aos": "^3.0.4",
-    "@types/lodash": "^4.14.186",
-    "@types/node": "18.7.23",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
-    "@types/react-image-gallery": "^1.2.0",
-    "@types/react-modal": "^3.13.1",
-    "@types/react-scroll": "^1.8.4",
-    "autoprefixer": "^10.4.12",
-    "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1",
-    "postcss": "^8.4.17",
-    "tailwindcss": "^3.1.8",
-    "typescript": "4.8.4"
-  }
+    "name": "my-portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "aos": "^3.0.0-beta.6",
+        "classnames": "^2.3.2",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.4",
+        "next": "12.3.1",
+        "next-seo": "^5.8.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-icons": "^4.4.0",
+        "react-image-gallery": "^1.2.11",
+        "react-modal": "^3.15.1",
+        "react-pageflip": "^2.0.3",
+        "react-responsive-carousel": "^3.2.23",
+        "react-scroll": "^1.8.8",
+        "react-tsparticles": "^2.3.3",
+        "sass": "^1.55.0",
+        "styled-components": "^6.0.5",
+        "tsparticles": "^2.3.4",
+        "tsparticles-engine": "^2.3.3"
+    },
+    "devDependencies": {
+        "@types/aos": "^3.0.4",
+        "@types/lodash": "^4.14.186",
+        "@types/node": "18.7.23",
+        "@types/react": "18.0.21",
+        "@types/react-dom": "18.0.6",
+        "@types/react-image-gallery": "^1.2.0",
+        "@types/react-modal": "^3.13.1",
+        "@types/react-scroll": "^1.8.4",
+        "autoprefixer": "^10.4.12",
+        "eslint": "8.24.0",
+        "eslint-config-next": "12.3.1",
+        "postcss": "^8.4.17",
+        "tailwindcss": "^3.1.8",
+        "typescript": "4.8.4"
+    },
+    "resolutions": {
+        "styled-components": "^6"
+    }
 }

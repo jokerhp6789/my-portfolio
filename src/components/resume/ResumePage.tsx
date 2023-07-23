@@ -10,6 +10,7 @@ import {
     ResumeEmploymentDataType,
     RESUME_EMPLOYMENT_DATA,
 } from "./data/ResumeData";
+import { styled } from "styled-components";
 
 export interface IResumePageProps {
     [key: string]: any;
@@ -71,9 +72,9 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     };
 
     const renderEmpHistory = (
-        <div className="">
+        <div className="resume-page__employee-history">
             {renderTitle("My timeline", "mt-2")}
-            <ol className="relative border-l-2 border-blue-200 dark:border-blue-500 md:ml-2">
+            <ol className="relative pl-3 border-blue-200 dark:border-blue-500 md:ml-2 resume-page__employee-history-timeline">
                 {RESUME_EMPLOYMENT_DATA.map(
                     (item: ResumeEmploymentDataType) => {
                         const {
@@ -154,12 +155,13 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                         );
                     }
                 )}
+                <div className="resume-page__vertical-line" />
             </ol>
         </div>
     );
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-10 md:gap-5 text-base overflow-hidden">
+        <ResumePageStyled className="grid grid-cols-1 lg:grid-cols-10 md:gap-5 text-base overflow-hidden">
             <PersonalInfo />
             <div className="dark:text-white lg:col-span-6">
                 {renderTitle("Intro", "text-focus-in mt-2")}
@@ -173,8 +175,21 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
                 {renderEmpHistory}
             </div>
             <div className="h-24" />
-        </div>
+        </ResumePageStyled>
     );
 };
 
 export default ResumePage;
+
+const ResumePageStyled = styled.div`
+    .resume-page__employee-history {
+        .resume-page__vertical-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: rgb(59 130 246);
+            z-index: 1;
+        }
+    }
+`;
