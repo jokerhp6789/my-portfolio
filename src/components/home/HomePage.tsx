@@ -18,22 +18,20 @@ export interface IHomePageProps {
 const HomePage: React.FC<IHomePageProps> = ({ id }) => {
     const renderAvatar = () => {
         return (
-            <section className="bounce-in-top">
-                <div className="relative border border-blue-200 bg-gradient-to-b from-blue-500 rounded-full w-80 h-80 mx-auto mt-5 home-page__avatar-wrapper">
-                    <Image
-                        src={require("../../../public/images/dev-ed-wave.png")}
-                        alt="Do Xuan Trung"
-                        className="home-page__avatar"
-                    />
-                </div>
-            </section>
+            <div className="bounce-in-top relative border border-blue-200 bg-gradient-to-b from-blue-500 rounded-full w-60 h-60 sm:w-80 sm:h-80 mx-auto mt-5 home-page__avatar-wrapper">
+                <Image
+                    src={require("../../../public/images/dev-ed-wave.png")}
+                    alt="Do Xuan Trung"
+                    className="home-page__avatar"
+                />
+            </div>
         );
     };
     const renderIntro = () => {
         return (
             <section className="mx-auto">
                 <div className="flex flex-col items-center mt-5">
-                    <h1 className="sm:text-3xl text-blue-500 text-focus-in text-2xl mt-3">
+                    <h1 className="sm:text-3xl text-blue-500 text-focus-in text-xl mt-3 font-normal">
                         Do Xuan Trung
                     </h1>
                     <div className="mt-5 px-3 sm:px-0 md:text-center max-w-md md:max-w-xl dark:text-white text-focus-in">
@@ -52,7 +50,9 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
             <section className="dark:text-white first-letter:md:text-center px-3 sm:px-0 w-full sm:w-auto mt-3 md:mt-5 z-10">
                 <div className="w-full flex justify-center items-center z-10">
                     <BsFillHddStackFill className="inline z-10" size={15} />
-                    <span className="mx-4 text-xl z-10 font-normal">My stacks</span>
+                    <span className="mx-4 text-lg z-10 font-normal">
+                        My stacks
+                    </span>
                 </div>
                 <div className="grid grid-cols-2 my-3 md:grid-cols-3">
                     <div className="flex items-center ml-6 mt-3 z-10">
@@ -141,7 +141,7 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
                         className="inline z-10 dark:text-white"
                         size={25}
                     />
-                    <span className="mx-4 text-xl z-10 dark:text-white font-normal">
+                    <span className="mx-4 text-lg z-10 dark:text-white font-normal">
                         My social
                     </span>
                 </div>
@@ -199,11 +199,4 @@ const HomePage: React.FC<IHomePageProps> = ({ id }) => {
 
 export default HomePage;
 
-const HomePageStyled = styled.div`
-    @media (max-width: 576px) {
-        .home-page__avatar-wrapper {
-            width: 250px !important;
-            height: 250px !important;
-        }
-    }
-`;
+const HomePageStyled = styled.div``;
