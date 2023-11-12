@@ -53,12 +53,16 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
     }) => {
         return (
             <div className="flex flex-row items-center gap-3 ml-3">
-                <a href={linkAndroid} target="_blank" rel="noreferrer">
-                    <DiAndroid className="cursor-pointer" size={24} />
-                </a>
-                <a href={linkIos} target="_blank" rel="noreferrer">
-                    <BsApple className="cursor-pointer" size={24} />
-                </a>
+                {linkAndroid ? (
+                    <a href={linkAndroid} target="_blank" rel="noreferrer">
+                        <DiAndroid className="cursor-pointer" size={24} />
+                    </a>
+                ) : null}
+                {linkIos ? (
+                    <a href={linkIos} target="_blank" rel="noreferrer">
+                        <BsApple className="cursor-pointer" size={24} />
+                    </a>
+                ) : null}
             </div>
         );
     };
@@ -165,9 +169,9 @@ const ResumePage: React.FC<IResumePageProps> = ({ id }) => {
             <PersonalInfo />
             <div className="dark:text-white lg:col-span-6">
                 {renderTitle("Intro", "text-focus-in mt-2")}
-                <ViewShowMore className="text-focus-in">
+                <ViewShowMore className="text-focus-in w-100 ml-2 md:ml-0">
                     {`<p className="">
-                  - As a full stack developer with expertise in React, React Native, and NodeJs, I have a strong foundation in both front-end and back-end development. 
+                  As a full stack developer with expertise in React, React Native, and NodeJs, I have a strong foundation in both front-end and back-end development. 
                   I have more than 5 years of experience in FE side. I have a passion for creating intuitive and engaging user experiences, and I enjoy using React to build responsive and dynamic web applications. Additionally, my experience with React Native has allowed me to create native mobile apps for both iOS and Android using the same codebase. \n
                   On the back-end, I have extensive experience with NodeJs and am comfortable working with server-side JavaScript to build scalable and efficient APIs. With this skill set, I am well-equipped to develop full-stack applications that deliver a seamless experience across multiple platforms
                 </p>`}

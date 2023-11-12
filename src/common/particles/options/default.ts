@@ -39,7 +39,7 @@ export const OPTIONS_DEFAULT = (theme: any): ISourceOptions => ({
             width: 1,
         },
         collisions: {
-            enable: true,
+            enable: false,
         },
         move: {
             direction: "none",

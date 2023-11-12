@@ -8,7 +8,40 @@ export const RESUME_EMPLOYMENT_DATA = [
             "Working as software developer, create and maintain company's websites and applications",
         projects: [
             {
-                label: "De Hygienique - Customer App - ( Processing upload to Apple & Play Store )",
+                label: "Dermaster - Clinic Platform",
+                iconWeb: "https://erp-dev.dermaster.asia",
+                content: (
+                    <React.Fragment>
+                        <p>
+                            <b> - Description:</b> Platform for clinic to open
+                            booking, order , quotation , doctor order , manage
+                            stocks and their products… and customer to register
+                            new account and verify and update their information
+                            .
+                        </p>
+                        <b> - Tech : </b>
+                        <ul>
+                            <li className="ml-3">
+                                * FE : NextJs, ReactJs, TailwindCss
+                            </li>
+                            <li className="ml-3">
+                                * BE : NestJs, Redis, MongoDb, GraphQl
+                            </li>
+                        </ul>
+
+                        <div>
+                            <b>- In-charge :</b> Fullstack
+                        </div>
+                    </React.Fragment>
+                ),
+            },
+            {
+                label: "De Hygienique - Customer App",
+                iconAndroidIos: {
+                    linkAndroid: null,
+                    linkIos:
+                        "https://apps.apple.com/th/app/de-hygienique/id1635508951",
+                },
                 content: (
                     <React.Fragment>
                         <p>
@@ -60,7 +93,7 @@ export const RESUME_EMPLOYMENT_DATA = [
                 ],
             },
             {
-                label: "De Hygienique - Technical App - ( Processing upload to Apple & Play Store )",
+                label: "De Hygienique - Technical App - ( Uploading to AppCenter for internal use )",
                 content: (
                     <React.Fragment>
                         <p>
@@ -134,12 +167,32 @@ export const RESUME_EMPLOYMENT_DATA = [
                 content: (
                     <React.Fragment>
                         <p>
-                            - Description: app version includes all
+                            <b>- Description :</b> app version includes all
                             functionality of the web version
                         </p>
                         <p>
-                            - Tech: React Native, Rest API ,React-redux,Firebase
-                            Messaging, ...
+                            <b>- Tech :</b> React Native, Rest API
+                            ,React-redux,Firebase Messaging, ...
+                        </p>
+                    </React.Fragment>
+                ),
+            },
+            {
+                label: "Lotus Mattress - Ecommerce",
+                iconWeb: "https://lotusmattress.com",
+                content: (
+                    <React.Fragment>
+                        <p>
+                            <b>- Description:</b> e-commercial site for
+                            customers to find products, place orders , make
+                            payments…
+                        </p>
+                        <p>
+                            <b>- Tech:</b> NextJS, Typescript, SCSS , Bootstrap,
+                            Oauth, Rest API,React-redux,...
+                        </p>
+                        <p>
+                            <b>- In charge :</b> Web Frontend
                         </p>
                     </React.Fragment>
                 ),
@@ -342,7 +395,8 @@ export const RESUME_EMPLOYMENT_DATA = [
     },
 ];
 
-export declare type ResumeEmploymentDataType = typeof RESUME_EMPLOYMENT_DATA[0];
+export declare type ResumeEmploymentDataType =
+    (typeof RESUME_EMPLOYMENT_DATA)[0];
 
 const PROJECT = RESUME_EMPLOYMENT_DATA[0].projects[1];
 
